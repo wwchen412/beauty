@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+html, body {
+  background: #000;
+}
+
+#section1 {
+  position: relative;
+}
+#section1 .s1-top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#section1 .s1_block {
+  margin-top: 15%;
+}
+#section1 .s1_block .ppl_block {
+  position: relative;
+  transform: scale(1.3);
+  padding-left: 10%;
+}
+#section1 .s1_block .ppl_block .bg {
+  position: absolute;
+  z-index: 1;
+}
+#section1 .s1_block .ppl_block .ppl {
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+  padding-left: 3rem;
+  -webkit-animation: leftIn 1.5s linear;
+          animation: leftIn 1.5s linear;
+}
+#section1 .s1_block .ppl_block .light {
+  position: absolute;
+  z-index: 2;
+  bottom: -10%;
+}
+#section1 .s1_block .text-area {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+#section1 .s1_block .text-area .ann {
+  max-width: 60%;
+  margin-left: 30%;
+}
+#section1 .s1_block .text-area h3 {
+  letter-spacing: 10px;
+}
+
+@-webkit-keyframes leftIn {
+  0% {
+    margin-left: -50vw;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes leftIn {
+  0% {
+    margin-left: -50vw;
+  }
+  100% {
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
