@@ -61,6 +61,35 @@ body {
   letter-spacing: 10px;
 }
 
+#section2 .s2_block {
+  position: relative;
+}
+#section2 .ipad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 22px;
+  padding: 1rem;
+}
+#section2 .ipad iframe {
+  display: block;
+}
+#section2 .ipad .ipad_light {
+  position: absolute;
+  top: -50%;
+  right: -40%;
+  z-index: 3;
+  pointer-events: none;
+}
+#section2 .ipad .ipad_frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
 @-webkit-keyframes leftIn {
   0% {
     margin-left: -50vw;

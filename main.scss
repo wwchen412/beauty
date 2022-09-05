@@ -69,7 +69,38 @@ body {
         }
     }
 }
-
+#section2 {
+    .s2_block{
+        position: relative;
+    }
+   .ipad{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        border-radius: 22px;
+        // overflow: hidden;
+        padding: 1rem;
+        iframe{
+            display: block;
+        }
+        .ipad_light{
+            position: absolute;
+            top: -50%;
+            right: -40%;
+            z-index: 3;
+            pointer-events: none;
+        }
+            
+        .ipad_frame{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+   }
+}
 @keyframes leftIn {
     0% {
         margin-left: -50vw;
