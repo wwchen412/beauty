@@ -43,8 +43,8 @@ body {
   z-index: 2;
   bottom: -10%;
   transform: translateX(calc(-5% - 15vw));
-  -webkit-animation: leftIn 1.5s linear 3.5s backwards;
-          animation: leftIn 1.5s linear 3.5s backwards;
+  -webkit-animation: leftIn 1.5s linear 2.5s backwards;
+          animation: leftIn 1.5s linear 2.5s backwards;
 }
 #section1 .s1_block .text-area {
   text-align: center;
