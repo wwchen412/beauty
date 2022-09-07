@@ -12,6 +12,11 @@ img {
 html,
 body {
   background: #000;
+  font-size: 1.2rem;
+}
+
+.text-area {
+  line-height: 0.5rem;
 }
 
 #section1 {
@@ -106,6 +111,24 @@ body {
   top: 0;
   width: 100%;
   pointer-events: none;
+}
+
+#section3 {
+  position: relative;
+}
+#section3 .s3_block {
+  max-width: 768px;
+}
+#section3 .bgl, #section3 .bgr {
+  max-width: 50vw;
+  position: absolute;
+  top: 30%;
+}
+#section3 .bgl {
+  left: 0;
+}
+#section3 .bgr {
+  right: 0;
 }
 
 @-webkit-keyframes leftIn {

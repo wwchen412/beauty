@@ -13,8 +13,11 @@ img {
 html,
 body {
     background: #000;
+    font-size: 1.2rem;
 }
-
+.text-area{
+    line-height: .5rem;
+}
 #section1 {
     position: relative;
     max-height: 100vh;
@@ -116,6 +119,23 @@ body {
             pointer-events: none;
         }
    }
+}
+#section3{
+    position: relative;
+    .s3_block{
+        max-width: 768px;
+    }
+    .bgl,.bgr{
+        max-width: 50vw;
+        position: absolute;
+        top: 30%;
+    }
+    .bgl{
+        left: 0;
+    }
+    .bgr{
+        right: 0;
+    }
 }
 @keyframes leftIn {
     0% {
