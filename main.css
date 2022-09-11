@@ -35,10 +35,6 @@ body {
   transition: 1s;
 }
 
-.section {
-  width: 100vw;
-  overflow-x: hidden;
-}
 .section.active .leftIn {
   -webkit-animation-name: transLeftIn;
           animation-name: transLeftIn;
@@ -210,6 +206,11 @@ body {
     max-width: 80%;
     padding: 0;
   }
+  #section2 .ipad .ipad_light {
+    width: 50%;
+    top: -25%;
+    right: 0;
+  }
 }
 
 #section3 {
@@ -225,6 +226,7 @@ body {
   z-index: 0;
 }
 #section3 .bgl {
+  max-width: 60vw;
   left: 0;
 }
 #section3 .bgr {
@@ -279,22 +281,22 @@ body {
 #section4 .ppl_block .img_wrap {
   position: relative;
 }
-#section4 .ppl_block .img_wrap > img {
+#section4 .ppl_block .img_wrap a > img {
   position: relative;
   z-index: 1;
   transition: 0.5s;
 }
-#section4 .ppl_block .img_wrap > img:hover {
+#section4 .ppl_block .img_wrap a > img:hover {
   transform: scale(1.1);
 }
-#section4 .ppl_block .img_wrap .bg {
+#section4 .ppl_block .img_wrap a .bg {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 0;
   pointer-events: none;
 }
-#section4 .ppl_block .img_wrap .bg.bg2 {
+#section4 .ppl_block .img_wrap a .bg.bg2 {
   transform: scale(1.5);
   left: -50%;
   bottom: 10%;
@@ -378,7 +380,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   #section5 .s5_block .case_group .row2, #section5 .s5_block .case_group .row3 {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 }
 #section5 .s5_block .case_group.active .row {
@@ -436,6 +438,12 @@ body {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
+#section5 .img_wrap {
+  transition: 0.5s;
+}
+#section5 .img_wrap:hover {
+  transform: scale(1.1);
+}
 
 #section6 {
   padding-top: 40.2%;
@@ -443,11 +451,23 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+@media screen and (max-width: 768px) {
+  #section6 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
 
+#section8 {
+  background-color: #333;
+}
 #section8 .title {
   margin-bottom: 150px;
 }
 @media screen and (max-width: 768px) {
+  #section8 {
+    background-color: #000;
+  }
   #section8 .title {
     margin-bottom: 2rem;
   }
@@ -467,6 +487,12 @@ body {
     height: auto;
     padding: 4rem 1rem;
   }
+}
+#section8 .team_group img {
+  transition: 0.5s;
+}
+#section8 .team_group img:hover {
+  transform: scale(1.1);
 }
 #section8 .awards {
   padding-top: 39.56%;
@@ -556,6 +582,10 @@ body {
 }
 #section10 .img_group img {
   transform: rotate(45deg) scale(1.2);
+  transition: 0.5s;
+}
+#section10 .img_group img:hover {
+  transform: rotate(45deg) scale(1.3);
 }
 #section10 .img_group.active {
   opacity: 1;
