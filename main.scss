@@ -55,7 +55,7 @@ body {
 @mixin transition {
     @for $i from 1 through 8 {
       &:nth-child(#{$i}) {
-        transition: all 1s #{($i-1) * 1}s ease-in;
+        transition: all 1s #{($i - 1) * 1}s ease-in;
       }
     }
 }
@@ -195,7 +195,7 @@ body {
 #section4{
     overflow: hidden;
     width: 100%;
-    margin-top: 20vh 0;
+    margin-top: 30vh;
     .s4_block{
         &_title{
             margin:auto;
@@ -274,6 +274,9 @@ body {
                 position: relative;
                 z-index: 1;
             }
+            .row{
+                opacity: 0;
+            }
             .row1{
                 .case1{
                     transform: translateY(40%);
@@ -285,6 +288,7 @@ body {
                 .case3{
                     transform: scale(1.5) translate(-1rem,-15%);
                 }
+                
             }
             .row2{
                 transform: scale(1.1);
@@ -319,7 +323,44 @@ body {
                     transform: scale(0.8) translate(-50%,0);
                 }
             }
-            
+            &.active {
+                .row{
+                    opacity: 1;
+                }
+                .wrap1,.wrap2{
+                    animation-name: transTopLeft;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+                .wrap2,.wrap3,.wrap11,.wrap6,.wrap7{
+                    animation-delay:.3s ;
+                }
+                .wrap3,.wrap4{
+                    animation-name: transRightTop;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+                .wrap5,.wrap6,.wrap7 {
+                    animation-name: transLeftIn;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+                .wrap8,.wrap9 {
+                    animation-name: transRightIn;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+                .wrap10 {
+                    animation-name: transLeftBtm;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+                .wrap11, .wrap12 {
+                    animation-name: transRightBtm;
+                    animation-duration: 1s;
+                    animation-fill-mode: backwards;
+                }
+            }
         }
     }
 }
@@ -423,24 +464,27 @@ body {
         max-width: 100%;
         overflow: hidden;
     }
-    &.active{
-        .pic1{
-            animation: transLeftIn 1s linear backwards;
-        }
-        .pic2{
-            animation: transLeftIn 1s 1s linear backwards;
-        }
-        .pic3{
-            animation: transLeftIn 1s 2s linear backwards;
-        }
-        .pic4{
-            animation: transLeftIn 1s 3s linear backwards;
-        }
-    }
+    
     .img_group{
             transform: rotate(-45deg) scale(.7);
         img{
             transform: rotate(45deg) scale(1.2);
+        }
+        opacity: 0;
+        &.active{
+            opacity: 1;
+            .pic1{
+                animation: transLeftIn 1s linear backwards;
+            }
+            .pic2{
+                animation: transLeftIn 1s 1s linear backwards;
+            }
+            .pic3{
+                animation: transLeftIn 1s 2s linear backwards;
+            }
+            .pic4{
+                animation: transLeftIn 1s 3s linear backwards;
+            }
         }
     }
 }
@@ -515,6 +559,42 @@ footer{
     100% {
         ransform: translateX(0);
     }
+}
+@keyframes transTopLeft{
+    0% {
+        transform: translate(-100vw,-100vh);
+     }
+ 
+     100% {
+         transform: translate(0);
+     }
+}
+@keyframes transRightTop{
+    0% {
+        transform: translate(100vw, -100vh);
+     }
+ 
+     100% {
+         transform: translate(0);
+     }
+}
+@keyframes transLeftBtm{
+    0% {
+        transform: translate(-100vw,100vh);
+     }
+ 
+     100% {
+         transform: translate(0);
+     }
+}
+@keyframes transRightBtm{
+    0% {
+        transform: translate(100vw, 100vh);
+     }
+
+     100% {
+         transform: translate(0);
+     }
 }
 @keyframes transLeftRotateIn{
     0% {

@@ -67,28 +67,28 @@ body {
   opacity: 0;
 }
 .text_area p:nth-child(1) {
-  transition: all 1s 1s ease-in;
+  transition: all 1s 0s ease-in;
 }
 .text_area p:nth-child(2) {
-  transition: all 1s 2s ease-in;
+  transition: all 1s 1s ease-in;
 }
 .text_area p:nth-child(3) {
-  transition: all 1s 3s ease-in;
+  transition: all 1s 2s ease-in;
 }
 .text_area p:nth-child(4) {
-  transition: all 1s 4s ease-in;
+  transition: all 1s 3s ease-in;
 }
 .text_area p:nth-child(5) {
-  transition: all 1s 5s ease-in;
+  transition: all 1s 4s ease-in;
 }
 .text_area p:nth-child(6) {
-  transition: all 1s 6s ease-in;
+  transition: all 1s 5s ease-in;
 }
 .text_area p:nth-child(7) {
-  transition: all 1s 7s ease-in;
+  transition: all 1s 6s ease-in;
 }
 .text_area p:nth-child(8) {
-  transition: all 1s 8s ease-in;
+  transition: all 1s 7s ease-in;
 }
 
 #section1 {
@@ -207,7 +207,7 @@ body {
 #section4 {
   overflow: hidden;
   width: 100%;
-  margin-top: 20vh 0;
+  margin-top: 30vh;
 }
 #section4 .s4_block_title {
   margin: auto;
@@ -284,6 +284,9 @@ body {
   position: relative;
   z-index: 1;
 }
+#section5 .s5_block .case_group .row {
+  opacity: 0;
+}
 #section5 .s5_block .case_group .row1 .case1 {
   transform: translateY(40%);
 }
@@ -324,6 +327,61 @@ body {
 }
 #section5 .s5_block .case_group .row3 .case3 {
   transform: scale(0.8) translate(-50%, 0);
+}
+#section5 .s5_block .case_group.active .row {
+  opacity: 1;
+}
+#section5 .s5_block .case_group.active .wrap1, #section5 .s5_block .case_group.active .wrap2 {
+  -webkit-animation-name: transTopLeft;
+          animation-name: transTopLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+#section5 .s5_block .case_group.active .wrap2, #section5 .s5_block .case_group.active .wrap3, #section5 .s5_block .case_group.active .wrap11, #section5 .s5_block .case_group.active .wrap6, #section5 .s5_block .case_group.active .wrap7 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+#section5 .s5_block .case_group.active .wrap3, #section5 .s5_block .case_group.active .wrap4 {
+  -webkit-animation-name: transRightTop;
+          animation-name: transRightTop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+#section5 .s5_block .case_group.active .wrap5, #section5 .s5_block .case_group.active .wrap6, #section5 .s5_block .case_group.active .wrap7 {
+  -webkit-animation-name: transLeftIn;
+          animation-name: transLeftIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+#section5 .s5_block .case_group.active .wrap8, #section5 .s5_block .case_group.active .wrap9 {
+  -webkit-animation-name: transRightIn;
+          animation-name: transRightIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+#section5 .s5_block .case_group.active .wrap10 {
+  -webkit-animation-name: transLeftBtm;
+          animation-name: transLeftBtm;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+#section5 .s5_block .case_group.active .wrap11, #section5 .s5_block .case_group.active .wrap12 {
+  -webkit-animation-name: transRightBtm;
+          animation-name: transRightBtm;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 #section6 {
@@ -426,27 +484,31 @@ body {
   max-width: 100%;
   overflow: hidden;
 }
-#section10.active .pic1 {
-  -webkit-animation: transLeftIn 1s linear backwards;
-          animation: transLeftIn 1s linear backwards;
-}
-#section10.active .pic2 {
-  -webkit-animation: transLeftIn 1s 1s linear backwards;
-          animation: transLeftIn 1s 1s linear backwards;
-}
-#section10.active .pic3 {
-  -webkit-animation: transLeftIn 1s 2s linear backwards;
-          animation: transLeftIn 1s 2s linear backwards;
-}
-#section10.active .pic4 {
-  -webkit-animation: transLeftIn 1s 3s linear backwards;
-          animation: transLeftIn 1s 3s linear backwards;
-}
 #section10 .img_group {
   transform: rotate(-45deg) scale(0.7);
+  opacity: 0;
 }
 #section10 .img_group img {
   transform: rotate(45deg) scale(1.2);
+}
+#section10 .img_group.active {
+  opacity: 1;
+}
+#section10 .img_group.active .pic1 {
+  -webkit-animation: transLeftIn 1s linear backwards;
+          animation: transLeftIn 1s linear backwards;
+}
+#section10 .img_group.active .pic2 {
+  -webkit-animation: transLeftIn 1s 1s linear backwards;
+          animation: transLeftIn 1s 1s linear backwards;
+}
+#section10 .img_group.active .pic3 {
+  -webkit-animation: transLeftIn 1s 2s linear backwards;
+          animation: transLeftIn 1s 2s linear backwards;
+}
+#section10 .img_group.active .pic4 {
+  -webkit-animation: transLeftIn 1s 3s linear backwards;
+          animation: transLeftIn 1s 3s linear backwards;
 }
 
 footer {
@@ -547,6 +609,70 @@ footer .top_btn {
   }
   100% {
     ransform: translateX(0);
+  }
+}
+@-webkit-keyframes transTopLeft {
+  0% {
+    transform: translate(-100vw, -100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes transTopLeft {
+  0% {
+    transform: translate(-100vw, -100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes transRightTop {
+  0% {
+    transform: translate(100vw, -100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes transRightTop {
+  0% {
+    transform: translate(100vw, -100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes transLeftBtm {
+  0% {
+    transform: translate(-100vw, 100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes transLeftBtm {
+  0% {
+    transform: translate(-100vw, 100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes transRightBtm {
+  0% {
+    transform: translate(100vw, 100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes transRightBtm {
+  0% {
+    transform: translate(100vw, 100vh);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 @-webkit-keyframes transLeftRotateIn {
