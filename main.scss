@@ -14,9 +14,15 @@ html,
 body {
     background: #000;
     font-size: 1.2rem;
+    text-align: center;
+}
+.title{
+    max-width: 640px;
+    margin: auto;
+    text-align: center;
 }
 .text-area{
-    line-height: .5rem;
+    // line-height: .5rem;
 }
 #section1 {
     position: relative;
@@ -139,6 +145,9 @@ body {
     }
 }
 #section4{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20vh 0;
     .s4_block{
         &_title{
             margin:auto;
@@ -151,6 +160,242 @@ body {
     .ppl_block{
         position: relative;
         z-index: 2;
+        margin: 10vh 0;
+        .img_wrap{
+            position: relative;
+            > img{
+                position: relative;
+                z-index: 1;
+            }
+            .bg{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+                &.bg2{
+                    transform: scale(1.5);
+                    left: -50%;
+                    bottom: 10%;
+                }
+            }
+        }
+    }
+}
+#section5 {
+    background: url('./images/s5_bg.png') 50% 50% no-repeat;
+    padding-top: 10vw;
+    background-size: cover;
+    .title{
+        position: relative;
+        .star{
+            position: absolute;
+            width: 150px;
+            &.star1{
+                left: -100px;
+                top: -100px;
+            }
+            &.star2{
+                left: -150px;
+            }
+        }
+    }
+    .s5_block{
+        padding: 5rem 0;
+        .text_area{
+            margin-bottom: 30vw;
+        }
+        .case_group{
+            transform: scale(.9);
+            img{
+                position: relative;
+                z-index: 1;
+            }
+            .row1{
+                .case1{
+                    transform: translateY(40%);
+                }
+                .case2{
+                    transform: translate(-2rem,0);
+                    z-index: 2;
+                }
+                .case3{
+                    transform: scale(1.5) translate(-1rem,-15%);
+                }
+            }
+            .row2{
+                transform: scale(1.1);
+                transform-origin: center left;
+                margin: 3rem 0;
+                position: relative;
+                z-index: 1;
+                .case1{
+                    transform: translateY(50%);
+                }
+                .case2{
+                    transform: scale(1.4) translateY(1rem);
+                    z-index: 2;
+                }
+                .case3{
+                    transform: scale(1.5);
+                }
+                .case4{
+                    transform: translateX(2rem);
+                    z-index: 2;
+                }
+                .case5{
+                    transform: translateY(2rem);
+                }
+            }
+            .row3{
+                .case2{
+                    transform: scale(0.9) translate(-20%,-20%);
+                    z-index: 0;
+                }
+                .case3{
+                    transform: scale(0.8) translate(-50%,0);
+                }
+            }
+            
+        }
+    }
+}
+#section6{
+    padding-top: 40.2%;
+    background-image: url('./images/s6_bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+#section8{
+    background-color: #333;
+    padding-top: 250px;
+    .title{
+        margin-bottom:  150px;
+    }
+    .text_bg{
+        background: url('/images/s8_bg.png');
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-size: cover;
+        margin-top: 2rem;
+    }
+    .awards{
+        padding-top: 39.56%;
+        background-image: url('./images/s8_awards.png');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+#section9{
+    background-image: url('./images/s9_bg.gif');
+    padding: 200px 0;
+    text-align: center;
+    background-size: cover;
+    .title{
+        margin-bottom: 3rem;
+    }
+    .champion{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 300px;
+        .col-3{
+            margin: -2rem
+        }
+        .pic2,.pic4{
+            transform: translate(0%,20%);
+        }
+    }
+    .toggle_group{
+        max-width: 1000px;
+        margin: auto;
+        .toggle_img{
+
+            flex: 1;
+            padding-top: 50%;
+            transition: .2s;
+            margin: 0 .5rem;
+            border-radius: 2rem;
+            background-size: cover;
+            background-position: center center;
+            &:hover{
+                flex: 2;
+            }
+            &.toggle_img1{
+                background-image: url('./images/s9_toggle1.png');
+            }
+            &.toggle_img2{
+                background-image: url('./images/s9_toggle2.jpg');
+            }
+            &.toggle_img3{
+                background-image: url('./images/s9_toggle3.png');
+            }
+        }
+        
+    }
+}
+#section10{
+    padding-top: 150px;
+    position: relative;
+    .s10_bg{
+        position: absolute;
+        top:0;
+        height: 100%;
+        max-width: 40vw;
+    }
+    .s10_bg_l{
+        left: 0;
+    }
+    .s10_bg_r{
+        right: 0;
+    }
+    .title{
+        margin-bottom: 70px;
+    }
+    .img_wrap{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .img_group{
+            transform: rotate(-45deg) scale(.7);
+        img{
+            transform: rotate(45deg) scale(1.2);
+        }
+    }
+}
+footer{
+    background: #fff;
+    position: relative;
+   h4,p{
+    color:#000;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+   }
+   span{
+    color:#006ad4;
+    font-size: 1.1rem;
+   }
+   .socials{
+    justify-content: center;
+    img{
+        margin: 0 .5rem;
+    }
+   }
+    img{
+        width: auto;
+        max-width: 50px;
+    }
+    .cs_btn,.top_btn{
+        position: absolute;
+    }
+    .cs_btn{
+        left: 0;
+        top: 50%;
+    }
+    .top_btn{
+        right: 0;
+        bottom: 2rem;
     }
 }
 @keyframes leftIn {
