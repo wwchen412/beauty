@@ -16,10 +16,79 @@ body {
   text-align: center;
 }
 
+.active .title {
+  opacity: 1;
+}
+
 .title {
   max-width: 640px;
   margin: auto;
   text-align: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.section.active .leftIn {
+  -webkit-animation-name: transLeftIn;
+          animation-name: transLeftIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+.section.active .rightIn {
+  -webkit-animation-name: transRightIn;
+          animation-name: transRightIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.delay1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.text_area.active p {
+  opacity: 1;
+}
+.text_area p {
+  opacity: 0;
+}
+.text_area p:nth-child(1) {
+  transition: all 1s 1s ease-in;
+}
+.text_area p:nth-child(2) {
+  transition: all 1s 2s ease-in;
+}
+.text_area p:nth-child(3) {
+  transition: all 1s 3s ease-in;
+}
+.text_area p:nth-child(4) {
+  transition: all 1s 4s ease-in;
+}
+.text_area p:nth-child(5) {
+  transition: all 1s 5s ease-in;
+}
+.text_area p:nth-child(6) {
+  transition: all 1s 6s ease-in;
+}
+.text_area p:nth-child(7) {
+  transition: all 1s 7s ease-in;
+}
+.text_area p:nth-child(8) {
+  transition: all 1s 8s ease-in;
 }
 
 #section1 {
@@ -146,6 +215,14 @@ body {
   margin-bottom: 5rem;
   max-width: 768px;
 }
+#section4.active .ppl_block .ppl1, #section4.active .ppl_block .ppl2 {
+  -webkit-animation: transLeftIn 1s linear backwards;
+          animation: transLeftIn 1s linear backwards;
+}
+#section4.active .ppl_block .ppl3, #section4.active .ppl_block .ppl4 {
+  -webkit-animation: transRightIn 1s linear backwards;
+          animation: transRightIn 1s linear backwards;
+}
 #section4 .ppl_block {
   position: relative;
   z-index: 2;
@@ -157,12 +234,17 @@ body {
 #section4 .ppl_block .img_wrap > img {
   position: relative;
   z-index: 1;
+  transition: 0.5s;
+}
+#section4 .ppl_block .img_wrap > img:hover {
+  transform: scale(1.1);
 }
 #section4 .ppl_block .img_wrap .bg {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 0;
+  pointer-events: none;
 }
 #section4 .ppl_block .img_wrap .bg.bg2 {
   transform: scale(1.5);
@@ -344,6 +426,22 @@ body {
   max-width: 100%;
   overflow: hidden;
 }
+#section10.active .pic1 {
+  -webkit-animation: transLeftIn 1s linear backwards;
+          animation: transLeftIn 1s linear backwards;
+}
+#section10.active .pic2 {
+  -webkit-animation: transLeftIn 1s 1s linear backwards;
+          animation: transLeftIn 1s 1s linear backwards;
+}
+#section10.active .pic3 {
+  -webkit-animation: transLeftIn 1s 2s linear backwards;
+          animation: transLeftIn 1s 2s linear backwards;
+}
+#section10.active .pic4 {
+  -webkit-animation: transLeftIn 1s 3s linear backwards;
+          animation: transLeftIn 1s 3s linear backwards;
+}
 #section10 .img_group {
   transform: rotate(-45deg) scale(0.7);
 }
@@ -417,5 +515,53 @@ footer .top_btn {
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes transLeftIn {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    ransform: translateX(0);
+  }
+}
+@keyframes transLeftIn {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    ransform: translateX(0);
+  }
+}
+@-webkit-keyframes transRightIn {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    ransform: translateX(0);
+  }
+}
+@keyframes transRightIn {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    ransform: translateX(0);
+  }
+}
+@-webkit-keyframes transLeftRotateIn {
+  0% {
+    transform: translate(80vw, 80vw);
+  }
+  100% {
+    ransform: translate(0);
+  }
+}
+@keyframes transLeftRotateIn {
+  0% {
+    transform: translate(80vw, 80vw);
+  }
+  100% {
+    ransform: translate(0);
   }
 }/*# sourceMappingURL=main.css.map */

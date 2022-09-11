@@ -16,13 +16,60 @@ body {
     font-size: 1.2rem;
     text-align: center;
 }
+.active{
+    .title{
+        opacity: 1;
+    }
+}
 .title{
     max-width: 640px;
     margin: auto;
     text-align: center;
+    opacity: 0;
+    transition: 1s;
 }
-.text-area{
+.section{
+    &.active{
+        .leftIn{
+            animation-name:transLeftIn ;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+            // animation: transLeftIn 1s linear backwards;
+        }
+        .rightIn{
+            animation-name:transRightIn ;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+.delay1{
+    animation-delay: .5s;
+}
+.delay2{
+    animation-delay: 1s;
+}
+.delay3{
+    animation-delay: 1.5s;
+}
+@mixin transition {
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        transition: all 1s #{($i-1) * 1}s ease-in;
+      }
+    }
+}
+.text_area{
     // line-height: .5rem;
+    &.active{
+        p{
+            opacity: 1;
+        }
+    }
+    p{
+        opacity:0;
+        @include transition;
+    }
 }
 #section1 {
     position: relative;
@@ -144,6 +191,7 @@ body {
         right: 0;
     }
 }
+
 #section4{
     overflow: hidden;
     width: 100%;
@@ -157,21 +205,37 @@ body {
            
         }
     }
+    &.active{
+        .ppl_block{
+           .ppl1,.ppl2{
+            animation: transLeftIn 1s linear backwards;
+           }
+           .ppl3,.ppl4{
+            animation: transRightIn 1s linear backwards;
+           }
+        }
+    }
     .ppl_block{
         position: relative;
         z-index: 2;
         margin: 10vh 0;
         .img_wrap{
             position: relative;
-            > img{
+           
+            > img {
                 position: relative;
                 z-index: 1;
+                transition: .5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
             .bg{
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 z-index: 0;
+                pointer-events: none;
                 &.bg2{
                     transform: scale(1.5);
                     left: -50%;
@@ -287,6 +351,7 @@ body {
         background-size: cover;
         background-attachment: fixed;
     }
+  
 }
 #section9{
     background-image: url('./images/s9_bg.gif');
@@ -307,6 +372,7 @@ body {
             transform: translate(0%,20%);
         }
     }
+  
     .toggle_group{
         max-width: 1000px;
         margin: auto;
@@ -356,6 +422,20 @@ body {
     .img_wrap{
         max-width: 100%;
         overflow: hidden;
+    }
+    &.active{
+        .pic1{
+            animation: transLeftIn 1s linear backwards;
+        }
+        .pic2{
+            animation: transLeftIn 1s 1s linear backwards;
+        }
+        .pic3{
+            animation: transLeftIn 1s 2s linear backwards;
+        }
+        .pic4{
+            animation: transLeftIn 1s 3s linear backwards;
+        }
     }
     .img_group{
             transform: rotate(-45deg) scale(.7);
@@ -415,5 +495,33 @@ footer{
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes transLeftIn{
+    0% {
+       transform: translateX(-100vw);
+    }
+
+    100% {
+        ransform: translateX(0);
+    }
+}
+@keyframes transRightIn{
+    0% {
+       transform: translateX(100vw);
+    }
+
+    100% {
+        ransform: translateX(0);
+    }
+}
+@keyframes transLeftRotateIn{
+    0% {
+       transform: translate(80vw,80vw);
+    }
+
+    100% {
+        ransform: translate(0);
     }
 }
