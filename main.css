@@ -67,6 +67,9 @@ body {
           animation-delay: 1.5s;
 }
 
+.text_area {
+  text-transform: uppercase;
+}
 .text_area.active p {
   opacity: 1;
 }
@@ -225,9 +228,19 @@ body {
   top: 30%;
   z-index: 0;
 }
+@media screen and (min-width: 1920px) {
+  #section3 .bgl, #section3 .bgr {
+    top: 0;
+  }
+}
 #section3 .bgl {
-  max-width: 60vw;
+  max-width: 90vw;
   left: 0;
+}
+@media screen and (min-width: 1920px) {
+  #section3 .bgl {
+    max-width: 80vw;
+  }
 }
 #section3 .bgr {
   right: 0;

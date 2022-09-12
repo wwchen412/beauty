@@ -66,6 +66,7 @@ body {
 }
 .text_area{
     // line-height: .5rem;
+    text-transform: uppercase;
     &.active{
         p{
             opacity: 1;
