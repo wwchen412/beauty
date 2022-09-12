@@ -173,6 +173,11 @@ body {
             }
 
         }
+        @media screen and (max-width:768px) {
+            .mobile-ml{
+                margin-left: -2rem;
+            }
+        }
     }
 }
 
@@ -274,7 +279,9 @@ body {
     }
 
     @media screen and (max-width: 768px) {
-
+        .title{
+            max-width: 75%;
+        }
         .bgl,
         .bgr {
             top: unset;
@@ -357,16 +364,17 @@ body {
         padding-top: 3rem;
 
         .title {
-            max-width: 80%;
+            max-width: 70%;
         }
 
         .ppl_block {
             margin: 2rem 0;
 
             .row {
-                div {
+                > div {
                     &:nth-child(3) {
                         order: 0;
+                        margin-left: -1rem;
                     }
 
                     &:nth-child(2) {
@@ -375,10 +383,12 @@ body {
 
                     &:nth-child(1) {
                         order: 3;
+                        
                     }
 
                     &:nth-child(4) {
                         order: 2;
+                        margin-left: -1rem;
                     }
                 }
 
@@ -423,12 +433,12 @@ body {
                 width: 70px;
 
                 &.star1 {
-                    left: -50px;
+                    left: -65px;
                     top: -50px;
                 }
 
                 &.star2 {
-                    left: -75px;
+                    left: -80px;
                 }
             }
         }
@@ -519,7 +529,13 @@ body {
 
                 .row2,
                 .row3 {
-                    transform: scale(1.1);
+                    transform: scale(1.25);
+                    margin-top: 2rem;
+                }
+                .row2{
+                    .case4{
+                        transform: translateX(10px);
+                    }
                 }
             }
 
@@ -605,6 +621,7 @@ body {
 #section8 {
     background-color: #333;
     // padding-top: 250px;
+    padding-top: 2rem;
 
     .title {
         margin-bottom: 150px;
@@ -685,6 +702,9 @@ body {
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: 0 20vh;
+        .title{
+            max-width: 90%;
+        }
     }
 
     .title {
@@ -748,6 +768,9 @@ body {
 
             &.toggle_img1 {
                 background-image: url('./images/s9_toggle1.png');
+                @media screen and (max-width:768px) {
+                    flex:2;
+                }
             }
 
             &.toggle_img2 {
@@ -768,6 +791,7 @@ body {
 
     @media screen and (max-width: 768px) {
         padding-top: 2rem;
+       
     }
 
     .s10_bg {
@@ -790,7 +814,7 @@ body {
 
         @media screen and (max-width:768px) {
             margin-bottom: 2rem;
-            max-width: 60%;
+            max-width: 50%;
         }
     }
 
