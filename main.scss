@@ -210,10 +210,16 @@ body {
         position: absolute;
         top: 30%;
         z-index: 0;
+        @media screen and (min-width:1920px) {
+           top:0;
+        }
     }
     .bgl{
-        max-width: 60vw;
+        max-width: 90vw;
         left: 0;
+        @media screen and (min-width:1920px) {
+            max-width: 80vw;
+        }
     }
     .bgr{
         right: 0;

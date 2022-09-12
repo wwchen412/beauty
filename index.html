@@ -42,10 +42,10 @@
             <div class="ipad">
                 <img src="./images/s2_ipad_light.png" alt="" class="ipad_light">
                 <div class="yt">
-                    <iframe width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1 "
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <iframe id="player" width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>`
                 </div>
                 <img class="ipad_frame" src="./images/s2_ipad.png" alt="">
             </div>
@@ -366,11 +366,19 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
+        let ytLoad = false;
         $(document).scroll(function () {
             const isMobile = ($(document).width() < 768);
             let top = $(document).scrollTop();
-            console.log(top);
             let halfScreenHeight = isMobile ? screen.height : screen.height * 0.5;
+           if((top > $('#section2').offset().top - halfScreenHeight ) && ytLoad === false) {
+            ytLoad = true;
+
+                $('.yt').html(`<iframe width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1&autoplay=1 "
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>`)
+            }
             $('.section').each(function () {
                 const offsetTop = $(this).offset().top;
                 if (top > (offsetTop - halfScreenHeight)) {
