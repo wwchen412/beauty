@@ -56,7 +56,7 @@
         <div class="container text-center">
             <div class="s3_block m-auto">
                 <img class="mb-5" src="./images/s3_title.png" alt="">
-                <div class="text_area">
+                <div class="text_area d-none d-sm-block">
                     <p>君綺深耕台灣，秉持著「擇善與利，真心圓滿」的理念，<br />
                         走過20個年頭，不斷的淬煉與進步，</p>
                     <p>讓我們在台灣醫美史上留下了深刻的足跡，<br />
@@ -65,6 +65,14 @@
                         邁向國際永續經營，並期許君綺讓台灣的醫療產業站上國際舞台，</p>
                     <p>這不只是我們的使命，<br />
                         更是為了讓每一位顧客獲得動人美麗，堅定自信的初衷。</p>
+                </div>
+                <div class="text_area d-block d-sm-none">
+                    <p>君綺深耕台灣，秉持著「擇善與利，真心圓滿」<br/>
+                        的理念，走過20個年頭，不斷的淬煉與進步，</p>
+                        <p>讓我們在台灣醫美史上留下了深刻的足跡，<br />更成為多方認證下的台灣醫美龍頭。</p>
+                        <p>未來我們將會持續把關醫療品質、<br />秉持暖心服務及品牌價值，邁向國際永續經營</p>
+                        <p>並期許君綺讓台灣的醫療產業站上國際舞台，<br />這不只是我們的使命，</p>
+                        <p>更是為了讓每一位顧客獲得動人美麗，<br />堅定自信的初衷。</p>
                 </div>
             </div>
 
@@ -81,7 +89,8 @@
                         <div class="col-12 col-sm-3 p-0">
                             <div class="img_wrap ppl1">
                                 <a target="_blank" href="https://bit.ly/3QoMtiQ">
-                                    <img class="" src="./images/s4_ppl1.png" alt="">
+                                    <img class="d-sm-block d-none" src="./images/s4_ppl1.png" alt="">
+                                    <img class="d-sm-none d-block" src="./images/s4_ppl1_m.png" alt="">
                                     <div class="bg">
                                         <img src="./images/s4_ppl1_bg.png" alt="">
                                     </div>
@@ -92,7 +101,8 @@
                         <div class="col-12 col-sm-3 p-0">
                             <div class="img_wrap ppl2">
                                 <a target="_blank" href="https://bit.ly/3RMsImo">
-                                    <img class="" src="./images/s4_ppl2.png" alt="">
+                                    <img class="d-sm-block d-none" src="./images/s4_ppl2.png" alt="">
+                                    <img class="d-sm-none d-block" src="./images/s4_ppl2_m.png" alt="">
                                     <div class="bg bg2">
                                         <img src="./images/s4_ppl2_bg.png" alt="">
                                     </div>
@@ -102,7 +112,8 @@
                         <div class="col-12 col-sm-3 p-0">
                             <div class="img_wrap ppl3">
                                 <a target="_blank" href="https://bit.ly/3ROb3dN">
-                                    <img class="" src="./images/s4_ppl3.png" alt="">
+                                    <img class="d-sm-block d-none" src="./images/s4_ppl3.png" alt="">
+                                    <img class="d-sm-none d-block" src="./images/s4_ppl3_m.png" alt="">
                                     <div class="bg bg2">
                                         <img src="./images/s4_ppl3_bg.png" alt="">
                                     </div>
@@ -112,7 +123,8 @@
                         <div class="col-12 col-sm-3 p-0">
                             <div class="img_wrap ppl4">
                                 <a target="_blank" href="https://bit.ly/3qiJ0HS">
-                                    <img class="" src="./images/s4_ppl4.png" alt="">
+                                    <img class="d-sm-block d-none" src="./images/s4_ppl4.png" alt="">
+                                    <img class="d-sm-none d-block" src="./images/s4_ppl4_m.png" alt="">
                                     <div class="bg bg2">
                                         <img src="./images/s4_ppl4_bg.png" alt="">
                                     </div>
@@ -225,28 +237,28 @@
             <div class="team_group">
                 <div class="row">
                     <div class="col-6">
-                        <img src="./images/s8_1.png" alt="" class="leftIn">
+                        <img src="./images/s8_1.png" alt="" class="left">
                     </div>
                     <div class="col-6">
-                        <img src="./images/s8_2.png" alt="" class="rightIn">
+                        <img src="./images/s8_2.png" alt="" class="right">
                     </div>
     
                 </div>
                 <div class="row my-sm-5 my-3">
                     <div class="col-5">
-                        <img src="./images/s8_3.png" alt="" class="leftIn">
+                        <img src="./images/s8_3.png" alt="" class="left">
                     </div>
                     <div class="col-7">
-                        <img src="./images/s8_4.png" alt="" class="rightIn">
+                        <img src="./images/s8_4.png" alt="" class="right">
                     </div>
                 </div>
                 <div class="row">
     
                     <div class="col-6">
-                        <img src="./images/s8_5.png" alt="" class="leftIn">
+                        <img src="./images/s8_5.png" alt="" class="left">
                     </div>
                     <div class="col-6">
-                        <img src="./images/s8_6.png" alt="" class="rightIn">
+                        <img src="./images/s8_6.png" alt="" class="right">
                     </div>
     
     
@@ -379,7 +391,8 @@
         $(document).scroll(function () {
             const isMobile = ($(document).width() < 768);
             let top = $(document).scrollTop();
-            let halfScreenHeight = isMobile ? screen.height : screen.height * 0.5;
+            // let halfScreenHeight = isMobile ? screen.height * 0.8 : screen.height * 0.5;
+            let halfScreenHeight =  screen.height * 0.5;
            if((top > $('#section2').offset().top - halfScreenHeight ) && ytLoad === false) {
             ytLoad = true;
 
@@ -416,6 +429,24 @@
                 }
             })
             $('.img_group').each(function () {
+                const offsetTop = $(this).offset().top;
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
+                    $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
+                }
+            })
+            $('.ppl_block .img_wrap').each(function(){
+                const offsetTop = $(this).offset().top;
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
+                    $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
+                }
+            })
+            $('.team_group img').each(function(){
                 const offsetTop = $(this).offset().top;
                 const sectionHeight = $(this).height();
                 if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {

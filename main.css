@@ -100,6 +100,13 @@ body {
 .text_area p:nth-child(8) {
   transition: all 1s 7s ease-in;
 }
+@media screen and (max-width: 768px) {
+  .text_area p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    line-height: 1.5rem;
+  }
+}
 
 #section1 {
   position: relative;
@@ -196,6 +203,7 @@ body {
   position: relative;
   border-radius: 22px;
   overflow: hidden;
+  height: 0;
 }
 #section2 .ipad .ipad_frame {
   position: absolute;
@@ -222,14 +230,16 @@ body {
 #section3 .s3_block {
   max-width: 768px;
 }
-#section3 .bgl, #section3 .bgr {
+#section3 .bgl,
+#section3 .bgr {
   max-width: 50vw;
   position: absolute;
   top: 30%;
   z-index: 0;
 }
 @media screen and (min-width: 1920px) {
-  #section3 .bgl, #section3 .bgr {
+  #section3 .bgl,
+#section3 .bgr {
     top: 0;
   }
 }
@@ -245,28 +255,17 @@ body {
 #section3 .bgr {
   right: 0;
 }
+@media screen and (max-width: 768px) {
+  #section3 .bgl,
+#section3 .bgr {
+    top: unset;
+  }
+}
 
 #section4 {
   overflow: hidden;
   width: 100%;
   margin-top: 30vh;
-}
-@media screen and (max-width: 768px) {
-  #section4 {
-    margin-top: 100px;
-  }
-  #section4 .ppl_block .row div:nth-child(3) {
-    order: 0;
-  }
-  #section4 .ppl_block .row div:nth-child(2) {
-    order: 1;
-  }
-  #section4 .ppl_block .row div:nth-child(1) {
-    order: 3;
-  }
-  #section4 .ppl_block .row div:nth-child(4) {
-    order: 2;
-  }
 }
 #section4 .s4_block_title {
   margin: auto;
@@ -274,25 +273,23 @@ body {
   margin-bottom: 5rem;
   max-width: 768px;
 }
-#section4.active .ppl_block {
-  opacity: 1;
-}
-#section4.active .ppl_block .ppl1, #section4.active .ppl_block .ppl2 {
-  -webkit-animation: transLeftIn 1s linear backwards;
-          animation: transLeftIn 1s linear backwards;
-}
-#section4.active .ppl_block .ppl3, #section4.active .ppl_block .ppl4 {
-  -webkit-animation: transRightIn 1s linear backwards;
-          animation: transRightIn 1s linear backwards;
-}
 #section4 .ppl_block {
-  opacity: 0;
   position: relative;
   z-index: 2;
   margin: 10vh 0;
 }
 #section4 .ppl_block .img_wrap {
   position: relative;
+}
+#section4 .ppl_block .img_wrap.ppl1.active, #section4 .ppl_block .img_wrap.ppl2.active {
+  opacity: 1;
+  -webkit-animation: transLeftIn 1s linear backwards;
+          animation: transLeftIn 1s linear backwards;
+}
+#section4 .ppl_block .img_wrap.ppl3.active, #section4 .ppl_block .img_wrap.ppl4.active {
+  opacity: 1;
+  -webkit-animation: transRightIn 1s linear backwards;
+          animation: transRightIn 1s linear backwards;
 }
 #section4 .ppl_block .img_wrap a > img {
   position: relative;
@@ -314,6 +311,33 @@ body {
   left: -50%;
   bottom: 10%;
 }
+@media screen and (max-width: 768px) {
+  #section4 {
+    margin: 2rem 0;
+    padding-top: 3rem;
+  }
+  #section4 .title {
+    max-width: 80%;
+  }
+  #section4 .ppl_block {
+    margin: 2rem 0;
+  }
+  #section4 .ppl_block .row div:nth-child(3) {
+    order: 0;
+  }
+  #section4 .ppl_block .row div:nth-child(2) {
+    order: 1;
+  }
+  #section4 .ppl_block .row div:nth-child(1) {
+    order: 3;
+  }
+  #section4 .ppl_block .row div:nth-child(4) {
+    order: 2;
+  }
+  #section4 .ppl_block .row .ppl1, #section4 .ppl_block .row .ppl2, #section4 .ppl_block .row .ppl3, #section4 .ppl_block .row .ppl4 {
+    opacity: 0;
+  }
+}
 
 #section5 {
   background: url("./images/s5_bg.png") 50% 50% no-repeat;
@@ -322,6 +346,11 @@ body {
 }
 #section5 .title {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  #section5 .title {
+    max-width: 60%;
+  }
 }
 #section5 .title .star {
   position: absolute;
@@ -334,8 +363,25 @@ body {
 #section5 .title .star.star2 {
   left: -150px;
 }
+@media screen and (max-width: 768px) {
+  #section5 .title .star {
+    width: 70px;
+  }
+  #section5 .title .star.star1 {
+    left: -50px;
+    top: -50px;
+  }
+  #section5 .title .star.star2 {
+    left: -75px;
+  }
+}
 #section5 .s5_block {
   padding: 5rem 0;
+}
+@media screen and (max-width: 768px) {
+  #section5 .s5_block {
+    padding: 2rem 0;
+  }
 }
 #section5 .s5_block .text_area {
   margin-bottom: 30vw;
@@ -392,14 +438,16 @@ body {
   transform: scale(0.8) translate(-50%, 0);
 }
 @media screen and (max-width: 768px) {
-  #section5 .s5_block .case_group .row2, #section5 .s5_block .case_group .row3 {
+  #section5 .s5_block .case_group .row2,
+#section5 .s5_block .case_group .row3 {
     transform: scale(1.1);
   }
 }
 #section5 .s5_block .case_group.active .row {
   opacity: 1;
 }
-#section5 .s5_block .case_group.active .wrap1, #section5 .s5_block .case_group.active .wrap2 {
+#section5 .s5_block .case_group.active .wrap1,
+#section5 .s5_block .case_group.active .wrap2 {
   -webkit-animation-name: transTopLeft;
           animation-name: transTopLeft;
   -webkit-animation-duration: 1s;
@@ -407,11 +455,16 @@ body {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-#section5 .s5_block .case_group.active .wrap2, #section5 .s5_block .case_group.active .wrap3, #section5 .s5_block .case_group.active .wrap11, #section5 .s5_block .case_group.active .wrap6, #section5 .s5_block .case_group.active .wrap7 {
+#section5 .s5_block .case_group.active .wrap2,
+#section5 .s5_block .case_group.active .wrap3,
+#section5 .s5_block .case_group.active .wrap11,
+#section5 .s5_block .case_group.active .wrap6,
+#section5 .s5_block .case_group.active .wrap7 {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-#section5 .s5_block .case_group.active .wrap3, #section5 .s5_block .case_group.active .wrap4 {
+#section5 .s5_block .case_group.active .wrap3,
+#section5 .s5_block .case_group.active .wrap4 {
   -webkit-animation-name: transRightTop;
           animation-name: transRightTop;
   -webkit-animation-duration: 1s;
@@ -419,7 +472,9 @@ body {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-#section5 .s5_block .case_group.active .wrap5, #section5 .s5_block .case_group.active .wrap6, #section5 .s5_block .case_group.active .wrap7 {
+#section5 .s5_block .case_group.active .wrap5,
+#section5 .s5_block .case_group.active .wrap6,
+#section5 .s5_block .case_group.active .wrap7 {
   -webkit-animation-name: transLeftIn;
           animation-name: transLeftIn;
   -webkit-animation-duration: 1s;
@@ -427,7 +482,8 @@ body {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-#section5 .s5_block .case_group.active .wrap8, #section5 .s5_block .case_group.active .wrap9 {
+#section5 .s5_block .case_group.active .wrap8,
+#section5 .s5_block .case_group.active .wrap9 {
   -webkit-animation-name: transRightIn;
           animation-name: transRightIn;
   -webkit-animation-duration: 1s;
@@ -443,7 +499,8 @@ body {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-#section5 .s5_block .case_group.active .wrap11, #section5 .s5_block .case_group.active .wrap12 {
+#section5 .s5_block .case_group.active .wrap11,
+#section5 .s5_block .case_group.active .wrap12 {
   -webkit-animation-name: transRightBtm;
           animation-name: transRightBtm;
   -webkit-animation-duration: 1s;
@@ -483,6 +540,7 @@ body {
   }
   #section8 .title {
     margin-bottom: 2rem;
+    max-width: 80%;
   }
 }
 #section8 .text_bg {
@@ -503,9 +561,21 @@ body {
 }
 #section8 .team_group img {
   transition: 0.5s;
+  opacity: 0;
 }
 #section8 .team_group img:hover {
   transform: scale(1.1);
+}
+#section8 .team_group img.active {
+  opacity: 1;
+}
+#section8 .team_group img.active.left {
+  -webkit-animation: transLeftIn 1s linear backwards;
+          animation: transLeftIn 1s linear backwards;
+}
+#section8 .team_group img.active.right {
+  -webkit-animation: transRightIn 1s linear backwards;
+          animation: transRightIn 1s linear backwards;
 }
 #section8 .awards {
   padding-top: 39.56%;
@@ -521,6 +591,14 @@ body {
   text-align: center;
   background-size: cover;
 }
+@media screen and (max-width: 768px) {
+  #section9 {
+    padding: 3rem 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 20vh;
+  }
+}
 #section9 .title {
   margin-bottom: 3rem;
 }
@@ -532,8 +610,19 @@ body {
 #section9 .champion .col-3 {
   margin: -2rem;
 }
-#section9 .champion .pic2, #section9 .champion .pic4 {
+#section9 .champion .pic1, #section9 .champion .pic2, #section9 .champion .pic3, #section9 .champion .pic4 {
+  transition: 0.5s;
+}
+#section9 .champion .pic1:hover, #section9 .champion .pic3:hover {
+  transform: scale(1.1);
+}
+#section9 .champion .pic2,
+#section9 .champion .pic4 {
   transform: translate(0%, 20%);
+}
+#section9 .champion .pic2:hover,
+#section9 .champion .pic4:hover {
+  transform: translate(0%, 20%) scale(1.1);
 }
 @media screen and (max-width: 768px) {
   #section9 .champion {
@@ -549,7 +638,7 @@ body {
   padding-top: 50%;
   transition: 0.2s;
   margin: 0 0.5rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-size: cover;
   background-position: center center;
 }
@@ -570,6 +659,11 @@ body {
   padding-top: 150px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  #section10 {
+    padding-top: 2rem;
+  }
+}
 #section10 .s10_bg {
   position: absolute;
   top: 0;
@@ -584,6 +678,12 @@ body {
 }
 #section10 .title {
   margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  #section10 .title {
+    margin-bottom: 2rem;
+    max-width: 60%;
+  }
 }
 #section10 .img_wrap {
   max-width: 100%;
@@ -604,16 +704,16 @@ body {
   opacity: 1;
 }
 #section10 .img_group.active .pic1 {
-  -webkit-animation: transLeftIn 1s linear backwards;
-          animation: transLeftIn 1s linear backwards;
+  -webkit-animation: transLeftRotateIn 1s linear backwards;
+          animation: transLeftRotateIn 1s linear backwards;
 }
 #section10 .img_group.active .pic2 {
   -webkit-animation: transLeftIn 1s 1s linear backwards;
           animation: transLeftIn 1s 1s linear backwards;
 }
 #section10 .img_group.active .pic3 {
-  -webkit-animation: transLeftIn 1s 2s linear backwards;
-          animation: transLeftIn 1s 2s linear backwards;
+  -webkit-animation: transLeftRotateIn 1s 2s linear backwards;
+          animation: transLeftRotateIn 1s 2s linear backwards;
 }
 #section10 .img_group.active .pic4 {
   -webkit-animation: transLeftIn 1s 3s linear backwards;
@@ -624,7 +724,8 @@ footer {
   background: #fff;
   position: relative;
 }
-footer h4, footer p {
+footer h4,
+footer p {
   color: #000;
   font-size: 0.8rem;
   letter-spacing: 5px;
@@ -643,7 +744,8 @@ footer img {
   width: auto;
   max-width: 50px;
 }
-footer .cs_btn, footer .top_btn {
+footer .cs_btn,
+footer .top_btn {
   position: absolute;
 }
 footer .cs_btn {
