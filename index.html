@@ -449,7 +449,7 @@
             $('.team_group img').each(function(){
                 const offsetTop = $(this).offset().top;
                 const sectionHeight = $(this).height();
-                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
+                if (top > (offsetTop - halfScreenHeight - 100)  && top < (offsetTop + sectionHeight)) {
                     $(this).addClass('active');
                 }else{
                     $(this).removeClass('active');

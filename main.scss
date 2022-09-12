@@ -420,6 +420,7 @@ body {
         padding: 5rem 0;
         @media screen and (max-width: 768px) {
             padding: 2rem 0;
+            overflow: hidden;
         }
 
         .text_area {
@@ -632,6 +633,9 @@ body {
                     animation: transRightIn 1s linear backwards;
                 }
             }
+        }
+        @media screen and (max-width: 768px) {
+            overflow: hidden;
         }
     }
 

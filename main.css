@@ -381,6 +381,7 @@ body {
 @media screen and (max-width: 768px) {
   #section5 .s5_block {
     padding: 2rem 0;
+    overflow: hidden;
   }
 }
 #section5 .s5_block .text_area {
@@ -576,6 +577,11 @@ body {
 #section8 .team_group img.active.right {
   -webkit-animation: transRightIn 1s linear backwards;
           animation: transRightIn 1s linear backwards;
+}
+@media screen and (max-width: 768px) {
+  #section8 .team_group {
+    overflow: hidden;
+  }
 }
 #section8 .awards {
   padding-top: 39.56%;
