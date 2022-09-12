@@ -388,28 +388,40 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>`)
             }
-            $('.section').each(function () {
+            $('.section').each(function (index) {
                 const offsetTop = $(this).offset().top;
-                if (top > (offsetTop - halfScreenHeight)) {
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight) && top < (offsetTop + sectionHeight)) {
                     $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
                 }
             })
             $('.text_area').each(function () {
                 const offsetTop = $(this).offset().top;
-                if (top > (offsetTop - halfScreenHeight)) {
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
                     $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
                 }
             })
             $('.case_group').each(function () {
                 const offsetTop = $(this).offset().top;
-                if (top > (offsetTop - halfScreenHeight)) {
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
                     $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
                 }
             })
             $('.img_group').each(function () {
                 const offsetTop = $(this).offset().top;
-                if (top > (offsetTop - halfScreenHeight)) {
+                const sectionHeight = $(this).height();
+                if (top > (offsetTop - halfScreenHeight)  && top < (offsetTop + sectionHeight)) {
                     $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
                 }
             })
         })
