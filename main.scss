@@ -88,8 +88,9 @@ body {
         opacity: 0;
         @include transition;
     }
+
     @media screen and (max-width:768px) {
-        p{
+        p {
             font-size: 0.8rem;
             margin-bottom: 0;
             line-height: 1.5rem;
@@ -144,6 +145,11 @@ body {
             max-width: 500px;
             margin: auto;
             animation: fadeIn 2s;
+
+            @media screen and (min-width:769px) {
+                line-height: 2rem;
+                margin-bottom: 0;
+            }
 
             .ann {
                 max-width: 60%;
@@ -266,7 +272,9 @@ body {
     .bgr {
         right: 0;
     }
+
     @media screen and (max-width: 768px) {
+
         .bgl,
         .bgr {
             top: unset;
@@ -347,11 +355,14 @@ body {
         // margin-top: 100px;
         margin: 2rem 0;
         padding-top: 3rem;
-        .title{
+
+        .title {
             max-width: 80%;
         }
+
         .ppl_block {
             margin: 2rem 0;
+
             .row {
                 div {
                     &:nth-child(3) {
@@ -370,7 +381,11 @@ body {
                         order: 2;
                     }
                 }
-                .ppl1,.ppl2,.ppl3,.ppl4{
+
+                .ppl1,
+                .ppl2,
+                .ppl3,
+                .ppl4 {
                     opacity: 0;
                 }
             }
@@ -386,6 +401,7 @@ body {
 
     .title {
         position: relative;
+
         @media screen and (max-width: 768px) {
             max-width: 60%;
         }
@@ -393,7 +409,7 @@ body {
         .star {
             position: absolute;
             width: 150px;
-          
+
             &.star1 {
                 left: -100px;
                 top: -100px;
@@ -402,13 +418,15 @@ body {
             &.star2 {
                 left: -150px;
             }
+
             @media screen and (max-width: 768px) {
                 width: 70px;
+
                 &.star1 {
                     left: -50px;
                     top: -50px;
                 }
-    
+
                 &.star2 {
                     left: -75px;
                 }
@@ -418,6 +436,7 @@ body {
 
     .s5_block {
         padding: 5rem 0;
+
         @media screen and (max-width: 768px) {
             padding: 2rem 0;
             overflow: hidden;
@@ -621,19 +640,24 @@ body {
         img {
             transition: .5s;
             opacity: 0;
+
             &:hover {
                 transform: scale(1.1);
             }
-            &.active{
+
+            &.active {
                 opacity: 1;
-                &.left{
+
+                &.left {
                     animation: transLeftIn 1s linear backwards;
                 }
-                &.right{
+
+                &.right {
                     animation: transRightIn 1s linear backwards;
                 }
             }
         }
+
         @media screen and (max-width: 768px) {
             overflow: hidden;
         }
@@ -675,18 +699,26 @@ body {
         .col-3 {
             margin: -2rem
         }
-        .pic1,.pic2,.pic3,.pic4{
+
+        .pic1,
+        .pic2,
+        .pic3,
+        .pic4 {
             transition: .5s;
         }
-        .pic1,.pic3{
-            &:hover{
+
+        .pic1,
+        .pic3 {
+            &:hover {
                 transform: scale(1.1);
             }
         }
+
         .pic2,
         .pic4 {
             transform: translate(0%, 20%);
-            &:hover{
+
+            &:hover {
                 transform: translate(0%, 20%) scale(1.1);
             }
         }
@@ -733,9 +765,11 @@ body {
 #section10 {
     padding-top: 150px;
     position: relative;
+
     @media screen and (max-width: 768px) {
         padding-top: 2rem;
     }
+
     .s10_bg {
         position: absolute;
         top: 0;
@@ -753,6 +787,7 @@ body {
 
     .title {
         margin-bottom: 70px;
+
         @media screen and (max-width:768px) {
             margin-bottom: 2rem;
             max-width: 60%;

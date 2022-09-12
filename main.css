@@ -152,6 +152,12 @@ body {
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
 }
+@media screen and (min-width: 769px) {
+  #section1 .s1_block .text-area {
+    line-height: 2rem;
+    margin-bottom: 0;
+  }
+}
 #section1 .s1_block .text-area .ann {
   max-width: 60%;
   margin-left: 30%;
@@ -334,7 +340,10 @@ body {
   #section4 .ppl_block .row div:nth-child(4) {
     order: 2;
   }
-  #section4 .ppl_block .row .ppl1, #section4 .ppl_block .row .ppl2, #section4 .ppl_block .row .ppl3, #section4 .ppl_block .row .ppl4 {
+  #section4 .ppl_block .row .ppl1,
+#section4 .ppl_block .row .ppl2,
+#section4 .ppl_block .row .ppl3,
+#section4 .ppl_block .row .ppl4 {
     opacity: 0;
   }
 }
@@ -616,10 +625,14 @@ body {
 #section9 .champion .col-3 {
   margin: -2rem;
 }
-#section9 .champion .pic1, #section9 .champion .pic2, #section9 .champion .pic3, #section9 .champion .pic4 {
+#section9 .champion .pic1,
+#section9 .champion .pic2,
+#section9 .champion .pic3,
+#section9 .champion .pic4 {
   transition: 0.5s;
 }
-#section9 .champion .pic1:hover, #section9 .champion .pic3:hover {
+#section9 .champion .pic1:hover,
+#section9 .champion .pic3:hover {
   transform: scale(1.1);
 }
 #section9 .champion .pic2,
