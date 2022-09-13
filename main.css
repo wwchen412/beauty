@@ -667,6 +667,11 @@ body {
   #section6 {
     background-size: 100%;
     background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -742,6 +747,17 @@ body {
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  #section8 .awards {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 #section9 {
@@ -918,7 +934,8 @@ body {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-#section10 .img_group .img_wrap1, #section10 .img_group .img_wrap3 {
+#section10 .img_group .img_wrap1,
+#section10 .img_group .img_wrap3 {
   animation-direction: alternate-reverse !important;
 }
 #section10 .img_group.active {
