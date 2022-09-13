@@ -470,7 +470,10 @@ body {
     background: url('./images/s5_bg.png') 50% 50% no-repeat;
     padding-top: 10vw;
     background-size: cover;
-
+    
+    @media screen and (min-width: 769px) {
+        overflow: hidden;
+    }
     .title {
         position: relative;
         @media screen and (min-width: 769px) {
@@ -709,8 +712,10 @@ body {
     background-color: #333;
    
     padding-top: 2rem;
+    
     @media screen and (min-width: 769px) {
         padding-top: 100px;
+        overflow: hidden;
     }
     .title {
         margin-bottom: 150px;

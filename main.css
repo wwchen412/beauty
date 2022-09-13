@@ -442,6 +442,11 @@ body {
   padding-top: 10vw;
   background-size: cover;
 }
+@media screen and (min-width: 769px) {
+  #section5 {
+    overflow: hidden;
+  }
+}
 #section5 .title {
   position: relative;
 }
@@ -672,6 +677,7 @@ body {
 @media screen and (min-width: 769px) {
   #section8 {
     padding-top: 100px;
+    overflow: hidden;
   }
 }
 #section8 .title {
