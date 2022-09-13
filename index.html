@@ -42,10 +42,13 @@
             <div class="ipad">
                 <img src="./images/s2_ipad_light.png" alt="" class="ipad_light">
                 <div class="yt">
-                    <iframe id="player" width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1"
+                    <!-- <iframe id="player" width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>`
+                        allowfullscreen></iframe>` -->
+                        <video id="video" loop controls muted>
+                            <source src="./images/video.mp4" type="video/mp4">
+                          </video>
                 </div>
                 <img class="ipad_frame" src="./images/s2_ipad.png" alt="">
             </div>
@@ -422,6 +425,7 @@
         $(document).ready(function () {
 
             $('#section1').addClass('active');
+            // $('video').trigger('pause');
             $(document).scroll(function () {
                 const isMobile = ($(document).width() < 768);
                 let top = $(document).scrollTop();
@@ -432,13 +436,8 @@
                 }else{
                     $('#section1').addClass('active');
                 }
-                if ((top > $('#section2').offset().top - halfScreenHeight) && ytLoad === false) {
-                    ytLoad = true;
-
-                    $('.yt').html(`<iframe width="540" height="410" src="https://www.youtube.com/embed/Bd-WWJ85uSg?mute=1&autoplay=1 "
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>`)
+                if ((top > $('#section2').offset().top - halfScreenHeight) ) {
+                    $('#video').trigger('play');
                 }
 
                 $('.section').each(function (index) {
