@@ -734,22 +734,40 @@ body {
 #section6 {
     padding-top: 40.2%;
     position: relative;
-    .bg_wrap{
-    
-    background-image: url('./images/s6_bg.png');
-    background-size: cover;
-    background-attachment: fixed;
 
-    @media screen and (max-width:768px) {
-        background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%
+    @media screen and (min-width: 768px) {
+        background-image: url('./images/s6_bg.png');
+        background-size: cover;
+        background-attachment: fixed;
     }
-}
+
+    // &:before{
+    //     content: '';
+    //     position: fixed;
+    //     z-index: -1;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     background: url('./images/s6_bg.png') center 0 no-repeat;
+    //     background-size: cover;
+    // }
+    .bg_wrap {
+
+        background-image: url('./images/s6_bg.png');
+        background-size: cover;
+        background-attachment: fixed;
+
+        @media screen and (max-width:768px) {
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    }
 }
 
 #section8 {
@@ -826,24 +844,31 @@ body {
     .awards {
         padding-top: 39.56%;
         position: relative;
-        .bg_wrap{
 
-        background-image: url('./images/s8_awards.png');
-        background-size: contain;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-
-        @media screen and (max-width: 768px) {
-            background-size: 100%;
+        @media screen and (min-width: 768px) {
+            background-image: url('./images/s8_awards.png');
+            background-size: contain;
+            background-attachment: fixed;
             background-repeat: no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%
-            
         }
-    }
+
+        .bg_wrap {
+
+            @media screen and (max-width: 768px) {
+                background-image: url('./images/s8_awards.png');
+                background-size: contain;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%
+            }
+        }
+
         // background-position: center center;
     }
 

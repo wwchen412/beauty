@@ -661,6 +661,13 @@ body {
   padding-top: 40.2%;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  #section6 {
+    background-image: url("./images/s6_bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
 #section6 .bg_wrap {
   background-image: url("./images/s6_bg.png");
   background-size: cover;
@@ -748,14 +755,20 @@ body {
   padding-top: 39.56%;
   position: relative;
 }
-#section8 .awards .bg_wrap {
-  background-image: url("./images/s8_awards.png");
-  background-size: contain;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+@media screen and (min-width: 768px) {
+  #section8 .awards {
+    background-image: url("./images/s8_awards.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (max-width: 768px) {
   #section8 .awards .bg_wrap {
+    background-image: url("./images/s8_awards.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
