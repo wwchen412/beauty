@@ -262,6 +262,11 @@ body {
 #section3 .s3_block {
   max-width: 768px;
 }
+@media screen and (min-width: 769px) {
+  #section3 .title {
+    max-width: 500px;
+  }
+}
 #section3 .bgl,
 #section3 .bgr {
   max-width: 50vw;
@@ -302,6 +307,11 @@ body {
   width: 100%;
   margin-top: 30vh;
 }
+@media screen and (min-width: 769px) {
+  #section4 .title {
+    max-width: 500px;
+  }
+}
 #section4 .s4_block_title {
   margin: auto;
   margin-top: 25vw;
@@ -340,9 +350,17 @@ body {
           animation-fill-mode: backwards;
 }
 @media screen and (min-width: 769px) {
-  #section4 .ppl_block .img_wrap.ppl4.active, #section4 .ppl_block .img_wrap.ppl1.active {
+  #section4 .ppl_block .img_wrap.active.ppl2 {
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+  }
+  #section4 .ppl_block .img_wrap.active.ppl4 {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  #section4 .ppl_block .img_wrap.active.ppl1 {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
   }
 }
 #section4 .ppl_block .img_wrap a > img {
@@ -405,6 +423,11 @@ body {
 }
 #section5 .title {
   position: relative;
+}
+@media screen and (min-width: 769px) {
+  #section5 .title {
+    max-width: 430px;
+  }
 }
 @media screen and (max-width: 768px) {
   #section5 .title {
@@ -614,6 +637,11 @@ body {
 #section8 .title {
   margin-bottom: 150px;
 }
+@media screen and (min-width: 769px) {
+  #section8 .title {
+    max-width: 550px;
+  }
+}
 @media screen and (max-width: 768px) {
   #section8 {
     background-color: #000;
@@ -675,6 +703,11 @@ body {
   padding: 200px 0;
   text-align: center;
   background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  #section9 {
+    box-shadow: 0px -350px 500px -200px #000 inset;
+  }
 }
 @media screen and (max-width: 768px) {
   #section9 {
@@ -797,6 +830,11 @@ body {
 }
 #section10 .title {
   margin-bottom: 70px;
+}
+@media screen and (min-width: 769px) {
+  #section10 .title {
+    max-width: 430px;
+  }
 }
 @media screen and (max-width: 768px) {
   #section10 .title {
