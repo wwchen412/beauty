@@ -229,6 +229,11 @@ body {
   max-width: 50%;
   width: 100%;
 }
+@media screen and (min-width: 769px) {
+  #section2 .ipad {
+    top: 48%;
+  }
+}
 #section2 .ipad video {
   display: block;
   position: absolute;
