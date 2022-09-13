@@ -659,15 +659,18 @@ body {
 
 #section6 {
   padding-top: 40.2%;
+  position: relative;
+}
+#section6 .bg_wrap {
   background-image: url("./images/s6_bg.png");
   background-size: cover;
   background-attachment: fixed;
 }
 @media screen and (max-width: 768px) {
-  #section6 {
+  #section6 .bg_wrap {
     background-size: 100%;
     background-repeat: no-repeat;
-    z-index: -1;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -743,16 +746,19 @@ body {
 }
 #section8 .awards {
   padding-top: 39.56%;
+  position: relative;
+}
+#section8 .awards .bg_wrap {
   background-image: url("./images/s8_awards.png");
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 768px) {
-  #section8 .awards {
+  #section8 .awards .bg_wrap {
     background-size: 100%;
     background-repeat: no-repeat;
-    z-index: -1;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
