@@ -124,6 +124,11 @@ body {
   max-height: 100vh;
   padding: 3rem 0;
 }
+@media screen and (max-width: 768px) {
+  #section1 {
+    margin-bottom: 2rem;
+  }
+}
 #section1 .s1-top-bg {
   position: absolute;
   top: 0;
@@ -131,6 +136,11 @@ body {
 }
 #section1 .s1_block .ppl_block {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  #section1 .s1_block .ppl_block {
+    transform: scale(1.2) translateX(10px);
+  }
 }
 #section1 .s1_block .ppl_block .bg {
   position: absolute;
@@ -140,6 +150,11 @@ body {
   position: relative;
   z-index: 1;
   padding-left: 3rem;
+}
+@media screen and (max-width: 768px) {
+  #section1 .s1_block .ppl_block .ppl {
+    padding-left: 1.5rem;
+  }
 }
 #section1 .s1_block .ppl_block .light {
   position: absolute;
@@ -186,6 +201,7 @@ body {
 @media screen and (max-width: 768px) {
   #section1 .s1_block .mobile-ml {
     margin-left: -2rem;
+    transform: scale(1.2);
   }
 }
 #section1.active .ppl {
@@ -246,13 +262,13 @@ body {
 }
 @media screen and (max-width: 768px) {
   #section2 .ipad {
-    max-width: 80%;
+    max-width: 70%;
     padding: 0;
   }
   #section2 .ipad .ipad_light {
     width: 50%;
     top: -25%;
-    right: 0;
+    right: -20%;
   }
 }
 
@@ -513,6 +529,14 @@ body {
 #section5 .s5_block .case_group .row2 .case5 {
   transform: translateY(2rem);
 }
+@media screen and (max-width: 768px) {
+  #section5 .s5_block .case_group .row2 .case1 {
+    transform: translate(-27%, 50%) scale(1.1);
+  }
+  #section5 .s5_block .case_group .row2 .case5 {
+    transform: translate(10px, 2rem);
+  }
+}
 #section5 .s5_block .case_group .row3 .case2 {
   transform: scale(0.9) translate(-20%, -20%);
   z-index: 0;
@@ -521,13 +545,19 @@ body {
   transform: scale(0.8) translate(-50%, 0);
 }
 @media screen and (max-width: 768px) {
+  #section5 .s5_block .case_group .row3 .case1 {
+    transform: scale(1.2) translate(20%, 20%);
+  }
+  #section5 .s5_block .case_group .row3 .case2 {
+    transform: scale(1) translate(0%, -10%);
+  }
   #section5 .s5_block .case_group .row2,
 #section5 .s5_block .case_group .row3 {
     transform: scale(1.25);
     margin-top: 2rem;
   }
   #section5 .s5_block .case_group .row2 .case4 {
-    transform: translateX(10px);
+    transform: translateX(20px);
   }
 }
 #section5 .s5_block .case_group.active .row {
@@ -633,6 +663,11 @@ body {
 #section8 {
   background-color: #333;
   padding-top: 2rem;
+}
+@media screen and (min-width: 769px) {
+  #section8 {
+    padding-top: 100px;
+  }
 }
 #section8 .title {
   margin-bottom: 150px;
