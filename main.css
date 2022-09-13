@@ -160,7 +160,10 @@ body {
 @media screen and (min-width: 769px) {
   #section1 .s1_block .text-area {
     line-height: 2rem;
-    margin-bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 #section1 .s1_block .text-area .ann {
@@ -312,16 +315,35 @@ body {
 }
 #section4 .ppl_block .img_wrap {
   position: relative;
+  opacity: 0;
 }
 #section4 .ppl_block .img_wrap.ppl1.active, #section4 .ppl_block .img_wrap.ppl2.active {
   opacity: 1;
-  -webkit-animation: transLeftIn 1s linear backwards;
-          animation: transLeftIn 1s linear backwards;
+  -webkit-animation-name: transLeftIn;
+          animation-name: transLeftIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 #section4 .ppl_block .img_wrap.ppl3.active, #section4 .ppl_block .img_wrap.ppl4.active {
   opacity: 1;
-  -webkit-animation: transRightIn 1s linear backwards;
-          animation: transRightIn 1s linear backwards;
+  -webkit-animation-name: transRightIn;
+          animation-name: transRightIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+@media screen and (min-width: 769px) {
+  #section4 .ppl_block .img_wrap.ppl4.active, #section4 .ppl_block .img_wrap.ppl1.active {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
 }
 #section4 .ppl_block .img_wrap a > img {
   position: relative;
@@ -394,11 +416,11 @@ body {
   width: 150px;
 }
 #section5 .title .star.star1 {
-  left: -100px;
+  left: -130px;
   top: -100px;
 }
 #section5 .title .star.star2 {
-  left: -150px;
+  left: -160px;
 }
 @media screen and (max-width: 768px) {
   #section5 .title .star {
@@ -736,18 +758,20 @@ body {
   flex: 2;
 }
 #section9 .toggle_group .toggle_img.toggle_img1 {
-  background-image: url("./images/s9_toggle1.png");
-}
-@media screen and (max-width: 768px) {
-  #section9 .toggle_group .toggle_img.toggle_img1 {
-    flex: 2;
-  }
+  order: 2;
+  background-image: url("./images/s9_toggle3.png");
 }
 #section9 .toggle_group .toggle_img.toggle_img2 {
+  order: 1;
   background-image: url("./images/s9_toggle2.jpg");
 }
 #section9 .toggle_group .toggle_img.toggle_img3 {
-  background-image: url("./images/s9_toggle3.png");
+  flex: 2;
+  order: 0;
+  background-image: url("./images/s9_toggle1.png");
+}
+#section9 .toggle_group .toggle_img.toggle_img2:hover + .toggle_img3, #section9 .toggle_group .toggle_img.toggle_img1:hover + .toggle_img2 + .toggle_img3 {
+  flex: 1;
 }
 
 #section10 {

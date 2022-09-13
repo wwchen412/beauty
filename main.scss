@@ -154,7 +154,11 @@ body {
 
             @media screen and (min-width:769px) {
                 line-height: 2rem;
-                margin-bottom: 0;
+                // margin-bottom: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
             .ann {
@@ -330,12 +334,16 @@ body {
 
         .img_wrap {
             position: relative;
-
+            opacity: 0;
             &.ppl1,
             &.ppl2 {
                 &.active {
                     opacity: 1;
-                    animation: transLeftIn 1s linear backwards;
+                    animation-name: transLeftIn;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: backwards;
+                    // animation: transLeftIn 1s linear backwards;
                 }
             }
 
@@ -343,11 +351,21 @@ body {
             &.ppl4 {
                 &.active {
                     opacity: 1;
-                    animation: transRightIn 1s linear backwards;
+                    animation-name: transRightIn;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: backwards;
                 }
 
             }
-
+            @media screen and (min-width: 769px) {
+                &.ppl4,&.ppl1{
+                    &.active{
+                        animation-delay: 1s;
+                    }
+                    
+                }
+            }
             a {
                 >img {
                     position: relative;
@@ -439,12 +457,12 @@ body {
             width: 150px;
 
             &.star1 {
-                left: -100px;
+                left: -130px;
                 top: -100px;
             }
 
             &.star2 {
-                left: -150px;
+                left: -160px;
             }
 
             @media screen and (max-width: 768px) {
@@ -815,18 +833,23 @@ body {
             }
 
             &.toggle_img1 {
-                background-image: url('./images/s9_toggle1.png');
-                @media screen and (max-width:768px) {
-                    flex:2;
-                }
+                order:2;
+                background-image: url('./images/s9_toggle3.png');
             }
 
             &.toggle_img2 {
+                order:1;
                 background-image: url('./images/s9_toggle2.jpg');
             }
 
             &.toggle_img3 {
-                background-image: url('./images/s9_toggle3.png');
+                flex:2;
+                order:0;
+                background-image: url('./images/s9_toggle1.png');
+            }
+            &.toggle_img2:hover +.toggle_img3,
+            &.toggle_img1:hover +.toggle_img2+.toggle_img3 {
+                flex:1;
             }
         }
 
