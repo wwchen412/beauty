@@ -75,6 +75,14 @@ body {
     animation-delay: 1.5s;
 }
 
+.delay4 {
+    animation-delay: 2s;
+}
+
+.delay5 {
+    animation-delay: 2.5s;
+}
+
 @mixin transition {
     @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
@@ -374,13 +382,16 @@ body {
         .img_wrap {
             position: relative;
             opacity: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
 
             &.ppl1,
             &.ppl2 {
                 &.active {
                     opacity: 1;
                     animation-name: transLeftIn;
-                    animation-duration: 1s;
+                    animation-duration: .5s;
                     animation-timing-function: linear;
                     animation-fill-mode: backwards;
                     // animation: transLeftIn 1s linear backwards;
@@ -388,11 +399,12 @@ body {
             }
 
             &.ppl3,
-            &.ppl4 {
+            &.ppl4,
+            &.ppl5 {
                 &.active {
                     opacity: 1;
                     animation-name: transRightIn;
-                    animation-duration: 1s;
+                    animation-duration: .5s;
                     animation-timing-function: linear;
                     animation-fill-mode: backwards;
                 }
@@ -403,15 +415,19 @@ body {
 
                 &.active {
                     &.ppl2 {
-                        animation-delay: 1s;
+                        animation-delay: .5s;
                     }
 
                     &.ppl4 {
-                        animation-delay: 2s;
+                        animation-delay: 1s;
                     }
 
                     &.ppl1 {
-                        animation-delay: 3s;
+                        animation-delay: 1.5s;
+                    }
+
+                    &.ppl5 {
+                        animation-delay: 2s;
                     }
 
                 }
@@ -551,8 +567,15 @@ body {
             margin-bottom: 30vw;
         }
 
+    }
+
+    .case_wrap {
+        position: relative;
+
+        
         .case_group {
             transform: scale(.9);
+
 
             img {
                 position: relative;
@@ -620,13 +643,63 @@ body {
             }
 
             .row3 {
+                position: relative;
+                z-index: 1;
+
                 .case2 {
                     transform: scale(0.9) translate(-20%, -20%);
-                    z-index: 0;
+                    z-index: 1;
                 }
 
                 .case3 {
                     transform: scale(0.8) translate(-50%, 0);
+                    z-index: 1;
+                }
+
+                .case4 {
+                    transform: scale(1.1) translate(0%, 30%);
+                }
+            }
+
+            .row4 {
+                margin-top: 8%;
+                position: relative;
+                z-index: 0;
+
+                .case1 {
+                    transform: scale(0.8) translate(10%, 0);
+                }
+
+                .case2 {
+                    transform: scale(1.1) translate(0, -20%);
+                }
+
+                .case3 {
+                    transform: translate(0, -50%);
+                    position: relative;
+                    z-index: 0;
+                }
+
+                .case4 {
+                    position: relative;
+                    z-index: 1;
+                    transform: scale(.8) translate(-40%, -20%);
+                }
+            }
+
+            .row5 {
+                .case1 {
+                    transform: scale(0.9) translate(-40%, 0);
+                    z-index: 1;
+                }
+
+                .case2 {
+                    transform: scale(1) translate(-40%, -30%);
+                    z-index: 1;
+                }
+
+                .case3 {
+                    transform: scale(.9) translate(-45%, -15%);
                 }
             }
 
@@ -654,78 +727,100 @@ body {
                 }
             }
 
-            &.active {
-                .row {
-                    opacity: 1;
-                }
+          
+        }
+        .black_bar {
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 100%;
+            z-index: 1;
+        }
 
-                .wrap1,
-                .wrap2 {
-                    animation-name: transTopLeft;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+        &.active {
+            .row {
+                opacity: 1;
+            }
 
-                .wrap2,
-                .wrap3,
-                .wrap11,
-                .wrap6,
-                .wrap7 {
-                    animation-delay: .3s;
-                }
+            .wrap1,
+            .wrap2 {
+                animation-name: transTopLeft;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
 
-                .wrap3,
-                .wrap4 {
-                    animation-name: transRightTop;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+            .wrap2,
+            .wrap3,
+            .wrap11,
+            .wrap6,
+            .wrap7 {
+                animation-delay: .3s;
+            }
 
-                .wrap5,
-                .wrap6,
-                .wrap7 {
-                    animation-name: transLeftIn;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+            .wrap3,
+            .wrap4 {
+                animation-name: transRightTop;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
 
-                .wrap8,
-                .wrap9 {
-                    animation-name: transRightIn;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+            .wrap5,
+            .wrap6,
+            .wrap7,
+            .wrap13 {
+                animation-name: transLeftIn;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
 
-                .wrap10 {
-                    animation-name: transLeftBtm;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+            .wrap8,
+            .wrap9 {
+                animation-name: transRightIn;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
 
-                .wrap11,
-                .wrap12 {
-                    animation-name: transRightBtm;
-                    animation-duration: 1s;
-                    animation-fill-mode: backwards;
-                }
+            .wrap10 {
+                animation-name: transLeftBtm;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+
+            .wrap11,
+            .wrap12,
+            .wrap15,
+            .wrap16 {
+                animation-name: transRightBtm;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+
+            .wrap11,
+            .wrap16 {
+                position: relative;
+                z-index: 1;
+            }
+
+            .wrap15 {
+                position: relative;
+                z-index: 0;
             }
         }
-    }
-
-    .img_wrap {
-        transition: .5s;
-        animation-name: infinite;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-
-        .hover_wrap {
+        .img_wrap {
             transition: .5s;
+            animation-name: infinite;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
 
-            &:hover {
-                transform: scale(1.15);
+            .hover_wrap {
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
             }
         }
     }
@@ -774,6 +869,11 @@ body {
     background-color: #333;
 
     padding-top: 2rem;
+
+    p {
+        margin-bottom: 0;
+        line-height: 200%;
+    }
 
     @media screen and (min-width: 769px) {
         padding-top: 100px;
@@ -827,11 +927,11 @@ body {
                 opacity: 1;
 
                 &.left {
-                    animation: transLeftIn 1s linear backwards;
+                    animation: transLeftIn 1.5s linear backwards;
                 }
 
                 &.right {
-                    animation: transRightIn 1s linear backwards;
+                    animation: transRightIn 1.5s linear backwards;
                 }
             }
         }
@@ -911,23 +1011,46 @@ body {
         .pic1,
         .pic2,
         .pic3,
-        .pic4 {
+        .pic4,
+        .pic5 {
             transition: .5s;
         }
 
         .pic1,
-        .pic3 {
+        .pic3,
+        .pic2,
+        .pic4 {
             &:hover {
                 transform: scale(1.15);
             }
         }
 
-        .pic2,
-        .pic4 {
-            transform: translate(0%, 20%);
+        .pic1 {
+            transform: translate(10%);
+
+        }
+
+        .pic3 {
+            transform: translate(-10%);
 
             &:hover {
-                transform: translate(0%, 20%) scale(1.15);
+                transform: translate(-10%) scale(1.15);
+            }
+        }
+
+        .pic4 {
+            transform: translate(30%, -10%);
+
+            &:hover {
+                transform: translate(30%, -10%) scale(1.15);
+            }
+        }
+
+        .pic5 {
+            transform: scale(0.8) translate(10%, -10%);
+
+            &:hover {
+                transform: translate(10%, -10%) scale(0.95);
             }
         }
 
@@ -1093,6 +1216,10 @@ body {
 
             .pic4 {
                 animation: transLeftIn 1s 3s linear backwards;
+            }
+
+            .pic5 {
+                animation: transLeftIn 1s 4s linear backwards;
             }
         }
 
@@ -1281,5 +1408,57 @@ footer {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+.index0 {
+    position: relative;
+    z-index: 0;
+}
+
+.index1 {
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-nav {
+
+    // position: absolute;
+    top: 0;
+
+    &.disabled {
+        display: block !important;
+    }
+
+    span {
+        color: #fff !important;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+        background-position: center;
+        padding: 10px;
+
+        &.prev-slide {
+            left: 0;
+            background-image: url('./images/left_arrow.png');
+        }
+
+        &.next-slide {
+            right: 0;
+            background-image: url('./images/right_arrow.png');
+        }
     }
 }
