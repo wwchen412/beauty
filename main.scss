@@ -514,19 +514,12 @@ body {
 }
 
 #section5 {
-    // background: url('./images/s5_bg.png') 50% 50% no-repeat;
+    background: url('./images/s5_bg.png') 50% 50% no-repeat;
     padding-top: 10vw;
     background-size: cover;
     position: relative;
-    background-color: #666;
-    video{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(0deg,#111,#323232);
-    }
+    // background-color: #666;
+   
     @media screen and (min-width: 769px) {
         overflow: hidden;
     }
@@ -1034,11 +1027,22 @@ body {
 }
 
 #section9 {
-    background-image: url('./images/s9_bg.gif');
+    // background-image: url('./images/s9_bg.gif');
     padding: 200px 0;
     text-align: center;
     background-size: cover;
-
+    position: relative;
+    background: linear-gradient(0deg, '#111',#666);
+    video{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg,#111,#363537);
+        z-index: 0;
+        // display: none;
+    }
     @media screen and (min-width:1200px) {
         box-shadow: 0px -350px 500px -200px #000 inset;
     }
@@ -1056,6 +1060,12 @@ body {
 
     .title {
         margin-bottom: 3rem;
+        position: relative;
+        z-index: 1;
+    }
+    .text_area{
+        position: relative;
+        z-index: 1;
     }
 
     .champion {
