@@ -472,7 +472,9 @@ body {
 
         .ppl_block {
             margin: 2rem 0;
-
+            .bg{
+                display: none;
+            }
             .row {
                 >div {
                     &:nth-child(3) {
@@ -491,6 +493,10 @@ body {
 
                     &:nth-child(4) {
                         order: 2;
+                        margin-left: -1rem;
+                    }
+                    &:nth-child(5) {
+                        order: 4;
                         margin-left: -1rem;
                     }
                 }
@@ -571,7 +577,8 @@ body {
 
     .case_wrap {
         position: relative;
-
+        width: 100%;
+        overflow: hidden;
         
         .case_group {
             transform: scale(.9);
@@ -639,6 +646,7 @@ body {
                     .case5 {
                         transform: translate(10px, 2rem);
                     }
+                    
                 }
             }
 
@@ -659,6 +667,7 @@ body {
                 .case4 {
                     transform: scale(1.1) translate(0%, 30%);
                 }
+               
             }
 
             .row4 {
@@ -706,11 +715,14 @@ body {
             @media screen and (max-width: 768px) {
                 .row3 {
                     .case1 {
-                        transform: scale(1.2) translate(20%, 20%);
+                        transform: scale(1.1) translate(20%, 0%);
                     }
 
                     .case2 {
                         transform: scale(1) translate(0%, -10%);
+                    }
+                    .case4 {
+                        transform: scale(1) translate(35%, 20%);
                     }
                 }
 
@@ -725,6 +737,17 @@ body {
                         transform: translateX(20px);
                     }
                 }
+                .row4{
+                    .case2{
+                        transform: scale(1.2) translate(-10%, -20%);
+                    }
+                    .case3{
+                        transform: scale(1.1) translate(0%, -40%);
+                    }
+                    .case4{
+                        transform: scale(1) translate(0%, -40%);
+                    }
+                }
             }
 
           
@@ -732,12 +755,39 @@ body {
         .black_bar {
             position: absolute;
             top: 50%;
-            transform: translate(0%, -50%);
             width: 100%;
             z-index: 1;
+            transition: .2s;
+            
+            margin-left: -100vw;
+            overflow: hidden;
+            transform: translate(0,-50%);
+            
         }
-
+        @keyframes light {
+            0%{
+                transform: translate(-100%,-100%) skewx(-25deg) rotate(155deg);  
+                
+            }
+            100%{
+                transform:translate(100%,100%) skewx(-25deg) rotate(155deg);  
+            }
+        }
         &.active {
+            .black_bar{
+                animation: leftIn 1s 2s forwards;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 150%;
+                    height: 50px;
+                    display: block;
+                    z-index: 3;
+                    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));  
+                    transform: translate(-100%,-100%) skewx(-25deg) rotate(155deg);  
+                    animation: light 2s 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards ;
+                }
+            }
             .row {
                 opacity: 1;
             }
@@ -1056,7 +1106,7 @@ body {
 
         @media screen and (max-width: 768px) {
             margin-bottom: 3rem;
-
+            
             &>div {
                 &:nth-child(1) {
                     transform: translateX(10%);
@@ -1065,21 +1115,29 @@ body {
                 }
 
                 &:nth-child(2) {
-                    transform: translateX(-20%);
+                    transform: translateX(-10%);
                     position: relative;
                     z-index: 0;
                 }
 
                 &:nth-child(3) {
-                    transform: translateX(40%) scale(0.8);
+                    transform: translate(30%,10%) scale(0.75);
                     position: relative;
                     z-index: 1;
                 }
 
                 &:nth-child(4) {
-                    transform: translate(0px, 15%) scale(0.7);
+                    transform: translate(0px, 0) scale(0.8);
                     position: relative;
                     z-index: 0;
+                    .pic4{
+                        transform: translate(0) rotate(18deg);
+                    }
+                }
+                &:nth-child(5) {
+                    transform: translate(18%, -45%) scale(0.8);
+                    position: relative;
+                    z-index: 1;
                 }
             }
         }
