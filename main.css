@@ -656,7 +656,7 @@ body {
     transform: scale(1.1) translate(0%, -40%);
   }
   #section5 .case_wrap .case_group .row4 .case4 {
-    transform: scale(1) translate(0%, -40%);
+    transform: scale(0.9) translate(-42%, -30%);
   }
 }
 #section5 .case_wrap .black_bar {
