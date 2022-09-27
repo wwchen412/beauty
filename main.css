@@ -708,8 +708,8 @@ body {
           animation: leftIn 1s 2s forwards;
 }
 #section5 .case_wrap.active .black_bar .text {
-  -webkit-animation: animate 1.5s 3s linear none;
-          animation: animate 1.5s 3s linear none;
+  -webkit-animation: animate 3s 3s linear infinite none;
+          animation: animate 3s 3s linear infinite none;
 }
 #section5 .case_wrap.active .row {
   opacity: 1;
