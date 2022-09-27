@@ -526,6 +526,7 @@ body {
 }
 #section5 .case_wrap .case_group {
   transform: scale(0.9);
+  transform-origin: 50% 50%;
 }
 #section5 .case_wrap .case_group img {
   position: relative;
@@ -660,38 +661,55 @@ body {
   margin-left: -100vw;
   overflow: hidden;
   transform: translate(0, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 3rem 0;
 }
-@-webkit-keyframes light {
-  0% {
-    transform: translate(-100%, -100%) skewx(-25deg) rotate(155deg);
+#section5 .case_wrap .black_bar .text {
+  font-size: 5rem;
+  font-weight: normal;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: rgb(216, 180, 101);
+  background: rgb(208, 172, 94);
+  background: linear-gradient(145deg, rgb(208, 172, 94) 0%, rgb(216, 180, 101) 10%, rgb(233, 217, 119) 16%, rgb(250, 244, 185) 19%, rgb(247, 215, 151) 22%, rgb(219, 184, 110) 43%, rgb(208, 172, 94) 51%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#section5 .case_wrap .black_bar .text span {
+  font-size: larger;
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  #section5 .case_wrap .black_bar {
+    padding: 1.5rem 0;
   }
-  100% {
-    transform: translate(100%, 100%) skewx(-25deg) rotate(155deg);
+  #section5 .case_wrap .black_bar .text {
+    font-size: 1.8rem;
   }
 }
-@keyframes light {
-  0% {
-    transform: translate(-100%, -100%) skewx(-25deg) rotate(155deg);
+@-webkit-keyframes animate {
+  to {
+    background-position: -200%;
   }
-  100% {
-    transform: translate(100%, 100%) skewx(-25deg) rotate(155deg);
+}
+@keyframes animate {
+  to {
+    background-position: -200%;
   }
 }
 #section5 .case_wrap.active .black_bar {
   -webkit-animation: leftIn 1s 2s forwards;
           animation: leftIn 1s 2s forwards;
 }
-#section5 .case_wrap.active .black_bar:before {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 50px;
-  display: block;
-  z-index: 3;
-  background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-  transform: translate(-100%, -100%) skewx(-25deg) rotate(155deg);
-  -webkit-animation: light 2s 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-          animation: light 2s 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+#section5 .case_wrap.active .black_bar .text {
+  -webkit-animation: animate 1.5s 3s linear none;
+          animation: animate 1.5s 3s linear none;
 }
 #section5 .case_wrap.active .row {
   opacity: 1;
