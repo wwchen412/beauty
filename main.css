@@ -36,56 +36,43 @@ body {
 }
 
 .section.active .leftIn {
-  -webkit-animation-name: transLeftIn;
-          animation-name: transLeftIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transLeftIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 .section.active .rightIn {
-  -webkit-animation-name: transRightIn;
-          animation-name: transRightIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transRightIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 
 .delay01 {
-  -webkit-animation-duration: 3s !important;
-          animation-duration: 3s !important;
+  animation-duration: 3s !important;
   animation-direction: alternate-reverse !important;
 }
 
 .delay02 {
-  -webkit-animation-duration: 2s !important;
-          animation-duration: 2s !important;
+  animation-duration: 2s !important;
 }
 
 .delay1 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .delay2 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .delay3 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .delay4 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .delay5 {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 .text_area {
@@ -215,16 +202,13 @@ body {
   }
 }
 #section1.active .ppl {
-  -webkit-animation: leftIn 1.5s linear;
-          animation: leftIn 1.5s linear;
+  animation: leftIn 1.5s linear;
 }
 #section1.active .light {
-  -webkit-animation: leftIn 1.5s linear 2.5s backwards;
-          animation: leftIn 1.5s linear 2.5s backwards;
+  animation: leftIn 1.5s linear 2.5s backwards;
 }
 #section1.active .text-area {
-  -webkit-animation: fadeIn 2s;
-          animation: fadeIn 2s;
+  animation: fadeIn 2s;
 }
 
 #section2 .s2_block {
@@ -314,11 +298,6 @@ body {
 #section3 .bgl {
   left: 0;
 }
-@media screen and (min-width: 1920px) {
-  #section3 .bgl {
-    max-width: 80vw;
-  }
-}
 #section3 .bgr {
   right: 0;
 }
@@ -362,42 +341,30 @@ body {
 }
 #section4 .ppl_block .img_wrap.ppl1.active, #section4 .ppl_block .img_wrap.ppl2.active {
   opacity: 1;
-  -webkit-animation-name: transLeftIn;
-          animation-name: transLeftIn;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transLeftIn;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
 }
 #section4 .ppl_block .img_wrap.ppl3.active, #section4 .ppl_block .img_wrap.ppl4.active, #section4 .ppl_block .img_wrap.ppl5.active {
   opacity: 1;
-  -webkit-animation-name: transRightIn;
-          animation-name: transRightIn;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transRightIn;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
 }
 @media screen and (min-width: 769px) {
   #section4 .ppl_block .img_wrap.active.ppl2 {
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+    animation-delay: 0.5s;
   }
   #section4 .ppl_block .img_wrap.active.ppl4 {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
+    animation-delay: 1s;
   }
   #section4 .ppl_block .img_wrap.active.ppl1 {
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
+    animation-delay: 1.5s;
   }
   #section4 .ppl_block .img_wrap.active.ppl5 {
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    animation-delay: 2s;
   }
 }
 #section4 .ppl_block .img_wrap a > img {
@@ -671,8 +638,6 @@ body {
   text-align: center;
   outline: none;
   text-transform: uppercase;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   background: rgb(216, 180, 101);
   background: rgb(208, 172, 94);
@@ -693,91 +658,65 @@ body {
     font-size: 1.8rem;
   }
 }
-@-webkit-keyframes animate {
-  to {
-    background-position: -200%;
-  }
-}
 @keyframes animate {
   to {
     background-position: -200%;
   }
 }
 #section5 .case_wrap.active .black_bar {
-  -webkit-animation: leftIn 1s 2s forwards;
-          animation: leftIn 1s 2s forwards;
+  animation: leftIn 1s 2s forwards;
 }
 #section5 .case_wrap.active .black_bar .text {
-  -webkit-animation: animate 3s 3s linear infinite none;
-          animation: animate 3s 3s linear infinite none;
+  animation: animate 3s 3s linear infinite none;
 }
 #section5 .case_wrap.active .row {
   opacity: 1;
 }
 #section5 .case_wrap.active .wrap1,
 #section5 .case_wrap.active .wrap2 {
-  -webkit-animation-name: transTopLeft;
-          animation-name: transTopLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transTopLeft;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap2,
 #section5 .case_wrap.active .wrap3,
 #section5 .case_wrap.active .wrap11,
 #section5 .case_wrap.active .wrap6,
 #section5 .case_wrap.active .wrap7 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 #section5 .case_wrap.active .wrap3,
 #section5 .case_wrap.active .wrap4 {
-  -webkit-animation-name: transRightTop;
-          animation-name: transRightTop;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transRightTop;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap5,
 #section5 .case_wrap.active .wrap6,
 #section5 .case_wrap.active .wrap7,
 #section5 .case_wrap.active .wrap13 {
-  -webkit-animation-name: transLeftIn;
-          animation-name: transLeftIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transLeftIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap8,
 #section5 .case_wrap.active .wrap9 {
-  -webkit-animation-name: transRightIn;
-          animation-name: transRightIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transRightIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap10 {
-  -webkit-animation-name: transLeftBtm;
-          animation-name: transLeftBtm;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transLeftBtm;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap11,
 #section5 .case_wrap.active .wrap12,
 #section5 .case_wrap.active .wrap15,
 #section5 .case_wrap.active .wrap16 {
-  -webkit-animation-name: transRightBtm;
-          animation-name: transRightBtm;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: transRightBtm;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 #section5 .case_wrap.active .wrap11,
 #section5 .case_wrap.active .wrap16 {
@@ -790,18 +729,12 @@ body {
 }
 #section5 .case_wrap .img_wrap {
   transition: 0.5s;
-  -webkit-animation-name: infinite;
-          animation-name: infinite;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: infinite;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 #section5 .case_wrap .img_wrap .hover_wrap {
   transition: 0.5s;
@@ -896,12 +829,10 @@ body {
   opacity: 1;
 }
 #section8 .team_group img.active.left {
-  -webkit-animation: transLeftIn 1.5s linear backwards;
-          animation: transLeftIn 1.5s linear backwards;
+  animation: transLeftIn 1.5s linear backwards;
 }
 #section8 .team_group img.active.right {
-  -webkit-animation: transRightIn 1.5s linear backwards;
-          animation: transRightIn 1.5s linear backwards;
+  animation: transRightIn 1.5s linear backwards;
 }
 @media screen and (max-width: 768px) {
   #section8 .team_group {
@@ -950,8 +881,7 @@ body {
   top: 0;
   left: 0;
   background: linear-gradient(0deg, #111, #363537);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 0;
 }
 @media screen and (min-width: 1200px) {
@@ -1139,18 +1069,12 @@ body {
 }
 #section10 .img_group .img_wrap {
   transition: 0.5s;
-  -webkit-animation-name: infinite;
-          animation-name: infinite;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: infinite;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 #section10 .img_group .img_wrap1,
 #section10 .img_group .img_wrap3 {
@@ -1160,24 +1084,19 @@ body {
   opacity: 1;
 }
 #section10 .img_group.active .pic1 {
-  -webkit-animation: transLeftRotateIn 1s linear backwards;
-          animation: transLeftRotateIn 1s linear backwards;
+  animation: transLeftRotateIn 1s linear backwards;
 }
 #section10 .img_group.active .pic2 {
-  -webkit-animation: transLeftIn 1s 1s linear backwards;
-          animation: transLeftIn 1s 1s linear backwards;
+  animation: transLeftIn 1s 1s linear backwards;
 }
 #section10 .img_group.active .pic3 {
-  -webkit-animation: transLeftRotateIn 1s 2s linear backwards;
-          animation: transLeftRotateIn 1s 2s linear backwards;
+  animation: transLeftRotateIn 1s 2s linear backwards;
 }
 #section10 .img_group.active .pic4 {
-  -webkit-animation: transLeftIn 1s 3s linear backwards;
-          animation: transLeftIn 1s 3s linear backwards;
+  animation: transLeftIn 1s 3s linear backwards;
 }
 #section10 .img_group.active .pic5 {
-  -webkit-animation: transLeftIn 1s 4s linear backwards;
-          animation: transLeftIn 1s 4s linear backwards;
+  animation: transLeftIn 1s 4s linear backwards;
 }
 @media screen and (max-width: 768px) {
   #section10 .img_group {
@@ -1250,29 +1169,12 @@ footer .top_btn {
   bottom: 2rem;
 }
 
-@-webkit-keyframes leftIn {
-  0% {
-    margin-left: -80vw;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
 @keyframes leftIn {
   0% {
     margin-left: -80vw;
   }
   100% {
     margin-left: 0;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes fadeIn {
@@ -1283,25 +1185,9 @@ footer .top_btn {
     opacity: 1;
   }
 }
-@-webkit-keyframes transLeftIn {
-  0% {
-    transform: translateX(-150vw);
-  }
-  100% {
-    ransform: translateX(0);
-  }
-}
 @keyframes transLeftIn {
   0% {
     transform: translateX(-150vw);
-  }
-  100% {
-    ransform: translateX(0);
-  }
-}
-@-webkit-keyframes transRightIn {
-  0% {
-    transform: translateX(150vw);
   }
   100% {
     ransform: translateX(0);
@@ -1315,25 +1201,9 @@ footer .top_btn {
     ransform: translateX(0);
   }
 }
-@-webkit-keyframes transTopLeft {
-  0% {
-    transform: translate(-100vw, -100vh);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
 @keyframes transTopLeft {
   0% {
     transform: translate(-100vw, -100vh);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-@-webkit-keyframes transRightTop {
-  0% {
-    transform: translate(100vw, -100vh);
   }
   100% {
     transform: translate(0);
@@ -1347,25 +1217,9 @@ footer .top_btn {
     transform: translate(0);
   }
 }
-@-webkit-keyframes transLeftBtm {
-  0% {
-    transform: translate(-100vw, 100vh);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
 @keyframes transLeftBtm {
   0% {
     transform: translate(-100vw, 100vh);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-@-webkit-keyframes transRightBtm {
-  0% {
-    transform: translate(100vw, 100vh);
   }
   100% {
     transform: translate(0);
@@ -1379,28 +1233,12 @@ footer .top_btn {
     transform: translate(0);
   }
 }
-@-webkit-keyframes transLeftRotateIn {
-  0% {
-    transform: translate(80vw, 80vw);
-  }
-  100% {
-    ransform: translate(0);
-  }
-}
 @keyframes transLeftRotateIn {
   0% {
     transform: translate(80vw, 80vw);
   }
   100% {
     ransform: translate(0);
-  }
-}
-@-webkit-keyframes infinite {
-  0% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 @keyframes infinite {
@@ -1454,4 +1292,6 @@ footer .top_btn {
 .owl-nav .nav-btn.next-slide {
   right: 0;
   background-image: url("./images/right_arrow.png");
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
