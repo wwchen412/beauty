@@ -48,8 +48,7 @@
             <div class="ipad">
                 <img src="./images/s2_ipad_light.png" alt="" class="ipad_light">
                 <div class="yt">
-                    <video id="video" loop controls muted playsinline>
-                        <source src="./images/video.mp4" type="video/mp4">
+                    <video id="video" data-yt2html5="https://www.youtube.com/watch?v=Bd-WWJ85uSg" loop controls muted playsinline>
                     </video>
                 </div>
                 <img class="ipad_frame" src="./images/ipad.png" alt="">
@@ -518,8 +517,10 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@2.0.0/dist/YouTubeToHtml5.js"></script>
+<script>new YouTubeToHtml5();</script>
     <script>
-
+        
         let ytLoad = false;
         function topFunction() {
             document.body.scrollTop = 0; // For Safari
@@ -529,6 +530,7 @@
             topFunction()
         })
         $(document).ready(function () {
+            
             $('.owl-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
